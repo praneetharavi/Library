@@ -1,0 +1,46 @@
+html, body {
+    min-height: 100vh;
+    width: 100%; /* Ensure the HTML and body take the full width */
+    overflow-y: hidden; /* Prevent horizontal overflow on the root elements */
+}
+
+* {
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+body {
+    padding: 0 30px;
+    font-family: Arial, sans-serif;
+    background-color: #F4E9DF;
+    margin: 0; /* Add margin: 0 to remove default body margin */
+    overflow-y: hidden; /* Prevent horizontal overflow */
+}
+
+
+
+.container {
+    margin: 0;
+    max-width: 1200px;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 2.7rem;
+    color: #004236;
+}
+
+p {
+    font-size: 1.0em;
+    font-family: poppins;
+}
+
+.img-fluid {
+    max-width: 70%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-center {
+    padding: 30px;
+
+}
