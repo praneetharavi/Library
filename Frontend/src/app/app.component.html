@@ -1,19 +1,117 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">  <img src="librarylogo.png" alt="Library Logo"></a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page" class="btn buttonlogin">
-                    Login
-                </a>
-                
-            </li>
-        </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"> <img src="librarylogo.png" alt="Library Logo"></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <button type="button" class="btn buttonlogin" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Login
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login or Create an account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="modal-container">
+                        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="login-form" *ngIf="showLoginForm">
+                            <div class="mb-3 form-group" [ngClass]="{'has-error': loginForm.get('loginEmail')?.invalid && loginForm.get('loginEmail')?.touched}">
+                                <input type="email" formControlName="loginEmail" class="form-control" id="loginEmail" name="loginEmail" placeholder="Enter email" required>
+                                <label for="loginEmail" class="form-label">Email</label>
+                            </div>
+                            
+                            <div class="mb-3 form-group password-input-container" [ngClass]="{'has-error': loginForm.get('loginPassword')?.invalid && loginForm.get('loginPassword')?.touched}">
+                                <input [type]="loginTextType ? 'text' : 'password'" formControlName="loginPassword" class="form-control" id="loginPassword" name="loginPassword" placeholder="Password" required>
+                                <label for="loginPassword" class="form-label">Password</label>
+                                <i class="fa eye-icon" [ngClass]="{'fa-eye-slash': !loginTextType, 'fa-eye': loginTextType}" (click)="toggleloginFieldTextType()"></i>
+                            </div>
+                            
+                            <div class="d-grid gap-2">
+                                <div class="form-check mb-3">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                                    <a href="#" class="float-end forgot-password-link">Forgot your password?</a>
+                                </div>
+                        
+                                <button type="submit" class="btn signin-modal-button" [disabled]="loginForm.invalid">Sign In & Continue</button>
+                                <button type="button" class="btn create-login-button" (click)="toggleForms()">Create an account</button>
+                            </div>
+                        </form>
+                        
+                        <form [formGroup]="signupForm" (ngSubmit)="onSignup()" id="signup-form" *ngIf="!showLoginForm">
+
+                            <div class="mb-3 form-group" [ngClass]="{'has-error': signupForm.get('firstName')?.invalid && signupForm.get('firstName')?.touched}">
+                                <input type="text" formControlName="firstName" class="form-control" id="firstName" placeholder="First Name" required>
+                                <label for="firstName" class="form-label">First Name</label>
+                            </div>
+                        
+                            <div class="mb-3 form-group" [ngClass]="{'has-error': signupForm.get('lastName')?.invalid && signupForm.get('lastName')?.touched}">
+                                <input type="text" formControlName="lastName" class="form-control" id="lastName" placeholder="Last Name" required>
+                                <label for="lastName" class="form-label">Last Name</label>
+                            </div>
+                        
+                            <div class="mb-3 form-group" [ngClass]="{'has-error': signupForm.get('signupEmail')?.invalid && signupForm.get('signupEmail')?.touched}">
+                                <input type="email" formControlName="signupEmail" class="form-control" id="signupEmail" placeholder="Enter email" required>
+                                <label for="signupEmail" class="form-label">Email</label>
+                            </div>
+                        
+                            <div class="mb-3 form-group password-input-container" [ngClass]="{'has-error': signupForm.get('signupPassword')?.invalid && signupForm.get('signupPassword')?.touched}">
+                                <input [type]="signupTextType ? 'text' : 'password'" formControlName="signupPassword" class="form-control" id="signupPassword" placeholder="Password" required>
+                                <label for="signupPassword" class="form-label">Password</label>
+                                <i class="fa eye-icon" [ngClass]="{'fa-eye-slash': !signupTextType, 'fa-eye': signupTextType}" (click)="toggleSignupFieldTextType()"></i>
+                            </div>
+                        
+                            <div class="mb-3 form-group password-input-container" [ngClass]="{'has-error': signupForm.get('signupConfirmPassword')?.invalid && signupForm.get('signupConfirmPassword')?.touched}">
+                                <input [type]="confirmTextType ? 'text' : 'password'" formControlName="signupConfirmPassword" class="form-control" id="signupconfirmPassword" placeholder="Confirm Password" required>
+                                <label for="signupconfirmPassword" class="form-label">Confirm Password</label>
+                                <i class="fa eye-icon" [ngClass]="{'fa-eye-slash': !confirmTextType, 'fa-eye': confirmTextType}" (click)="toggleConfirmFieldTextType()"></i>
+                            </div>
+                        
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn signin-modal-button" [disabled]="signupForm.invalid">Signup</button>
+                                <button type="button" class="btn create-login-button" (click)="toggleForms()">Already have an account? Signin</button>
+                            </div>
+                        
+                        </form>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-</nav>
 
-<router-outlet></router-outlet>
+
+
+    <router-outlet></router-outlet>
+
+
+</body>
+
