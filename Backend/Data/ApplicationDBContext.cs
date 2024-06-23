@@ -16,9 +16,26 @@ namespace Backend.Data
         public DbSet<Borrowing> Borrowings { get; set; }
         public DbSet<Review> Reviews { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+          
             base.OnModelCreating(modelBuilder); // Ensure Identity models are configured
+
+
+            List<IdentityRole> roleList = new List<IdentityRole> {
+               new IdentityRole
+               {
+                   Name = Models.Roles.Librarian,
+                   NormalizedName = Models.Roles.Librarian.ToUpper()
+               },
+               new IdentityRole
+               {
+                   Name = Models.Roles.Customer,
+                   NormalizedName = Models.Roles.Customer.ToUpper()
+                }
+
+            };
 
             // Configure constraints, indexes, etc. here
             modelBuilder.Entity<Book>().HasIndex(b => b.ISBN).IsUnique();
