@@ -9,7 +9,7 @@ namespace Backend.Models
         public int Id { get; set; }
 
         [Required]
-        public int UserId { get; set; }
+        public String UserId { get; set; }
 
         [Required]
         public int BookId { get; set; }

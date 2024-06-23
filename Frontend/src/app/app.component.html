@@ -93,7 +93,17 @@
                                 <label for="signupconfirmPassword" class="form-label">Confirm Password</label>
                                 <i class="fa eye-icon" [ngClass]="{'fa-eye-slash': !confirmTextType, 'fa-eye': confirmTextType}" (click)="toggleConfirmFieldTextType()"></i>
                             </div>
-                        
+                            
+                            <div class="mb-3 form-group" [ngClass]="{'has-error': signupForm.get('role')?.invalid && signupForm.get('role')?.touched}">
+                                
+                                <select formControlName="role" id="role" class="form-select" required>
+                                    <option value="">Select Role</option>
+                                    <option value="librarian">Librarian</option>
+                                    <option value="customer">Customer</option>
+                                </select>
+                            </div>
+                            
+
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn signin-modal-button" [disabled]="signupForm.invalid">Signup</button>
                                 <button type="button" class="btn create-login-button" (click)="toggleForms()">Already have an account? Signin</button>

@@ -32,7 +32,8 @@ export class AppComponent {
       lastName: ['', Validators.required],
       signupEmail: ['', [Validators.required, Validators.email]],
       signupPassword: ['', Validators.required],
-      signupConfirmPassword: ['', Validators.required]
+      signupConfirmPassword: ['', Validators.required],
+      role: ['', Validators.required]
     });
   }
   onSubmit() {

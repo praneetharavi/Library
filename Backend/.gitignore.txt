@@ -1,0 +1,20 @@
+# Ignore bin and obj directories
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.sln.docstates
+
+# Ignore NuGet packages
+*.nuget.props
+*.nuget.targets
+packages/
+
+# Ignore build output
+[Dd]ebug/
+[Rr]elease/
+
+# Visual Studio files
+.vs/

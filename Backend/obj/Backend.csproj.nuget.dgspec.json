@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Backend.csproj": {}
+    "C:\\Users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Backend.csproj": {
+    "C:\\Users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Backend.csproj",
+        "projectPath": "C:\\Users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\Backend.csproj",
         "packagesPath": "C:\\Users\\vamsi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\obj\\",
+        "outputPath": "C:\\Users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vamsi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -59,6 +67,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
               "version": "[8.0.6, )"
             },
