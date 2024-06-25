@@ -1,0 +1,96 @@
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login or Create an account</h5>
+            <button type="button" id="closeModalButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()">
+            </button>
+        </div>
+
+        <div class="modal-body">
+
+            <div class="modal-container">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="login-form" *ngIf="showLoginForm">
+                    <div class="mb-3 form-group" [ngClass]="{'has-error': loginForm.get('loginEmail')?.invalid && loginForm.get('loginEmail')?.touched}">
+                        <input type="email" formControlName="loginEmail" class="form-control" id="loginEmail" name="loginEmail" placeholder="Enter email" required>
+                        <label for="loginEmail" class="form-label">Email</label>
+                    </div>
+                    
+                    <div class="mb-3 form-group password-input-container" [ngClass]="{'has-error': loginForm.get('loginPassword')?.invalid && loginForm.get('loginPassword')?.touched}">
+                        <input [type]="loginTextType ? 'text' : 'password'" formControlName="loginPassword" class="form-control" id="loginPassword" name="loginPassword" placeholder="Password" required>
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <i class="fa eye-icon" [ngClass]="{'fa-eye-slash': !loginTextType, 'fa-eye': loginTextType}" (click)="toggleloginFieldTextType()"></i>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                            <a href="#" class="float-end forgot-password-link">Forgot your password?</a>
+                        </div>
+                        <div *ngIf="errorMessage" class="alert alert-danger">
+                            {{ errorMessage }}
+                          </div>
+                        <button type="submit" class="btn signin-modal-button" [disabled]="loginForm.invalid">Sign In & Continue</button>
+                        <button type="button" class="btn create-login-button" (click)="toggleForms()">Create an account</button>
+                    </div>
+                </form>
+                
+                <form [formGroup]="signupForm" (ngSubmit)="onSignup()" id="signup-form" *ngIf="!showLoginForm">
+
+                    <div class="mb-3 form-group" [ngClass]="{'has-error': signupForm.get('firstName')?.invalid && signupForm.get('firstName')?.touched}">
+                        <input type="text" formControlName="firstName" class="form-control" id="firstName" placeholder="First Name" required>
+                        <label for="firstName" class="form-label">First Name</label>
+                    </div>
+                
+                    <div class="mb-3 form-group" [ngClass]="{'has-error': signupForm.get('lastName')?.invalid && signupForm.get('lastName')?.touched}">
+                        <input type="text" formControlName="lastName" class="form-control" id="lastName" placeholder="Last Name" required>
+                        <label for="lastName" class="form-label">Last Name</label>
+                    </div>
+                
+                    <div class="mb-3 form-group" [ngClass]="{'has-error': signupForm.get('signupEmail')?.invalid && signupForm.get('signupEmail')?.touched}">
+                        <input type="email" formControlName="signupEmail" class="form-control" id="signupEmail" placeholder="Enter email" required>
+                        <label for="signupEmail" class="form-label">Email</label>
+                    </div>
+                
+                    <div class="mb-3 form-group password-input-container" [ngClass]="{'has-error': signupForm.get('signupPassword')?.invalid && signupForm.get('signupPassword')?.touched}">
+                        <input [type]="signupTextType ? 'text' : 'password'" formControlName="signupPassword" class="form-control" id="signupPassword" placeholder="Password" required>
+                        <label for="signupPassword" class="form-label">Password</label>
+                        <i class="fa eye-icon" [ngClass]="{'fa-eye-slash': !signupTextType, 'fa-eye': signupTextType}" (click)="toggleSignupFieldTextType()"></i>
+                    </div>
+                
+                    <div class="mb-3 form-group password-input-container" [ngClass]="{'has-error': signupForm.get('signupConfirmPassword')?.invalid && signupForm.get('signupConfirmPassword')?.touched}">
+                        <input [type]="confirmTextType ? 'text' : 'password'" formControlName="signupConfirmPassword" class="form-control" id="signupconfirmPassword" placeholder="Confirm Password" required>
+                        <label for="signupconfirmPassword" class="form-label">Confirm Password</label>
+                        <i class="fa eye-icon" [ngClass]="{'fa-eye-slash': !confirmTextType, 'fa-eye': confirmTextType}" (click)="toggleConfirmFieldTextType()"></i>
+                    </div>
+                    
+                    <div class="mb-3 form-group" [ngClass]="{'has-error': signupForm.get('role')?.invalid && signupForm.get('role')?.touched}">
+                        
+                        <select formControlName="role" id="role" class="form-select" required>
+                            <option value="">Select Role</option>
+                            <option value="Librarian">Librarian</option>
+                            <option value="Customer">Customer</option>
+                        </select>
+                    </div>
+                    
+                    <div *ngIf="errorMessage" class="alert alert-danger">
+                        {{ errorMessage }}
+                      </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn signin-modal-button" [disabled]="signupForm.invalid">Signup</button>
+                        <button type="button" class="btn create-login-button" (click)="toggleForms()">Already have an account? Signin</button>
+                    </div>
+                
+                </form>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>

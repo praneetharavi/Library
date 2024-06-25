@@ -1,0 +1,120 @@
+
+.modal-container{
+    padding: 20px;
+  }
+  .signin-modal-button {
+    font-weight: bold;
+    font-family: poppins;
+    padding: 10px 15px;
+    color: #FFC0B8;
+    background-color: #004236;
+    border: none; /* Optional: Remove border if desired */
+}
+
+.signin-modal-button:hover {
+    background-color: #FFC0B8;
+    color: #004236;
+    font-weight: bold;
+    font-family: poppins;
+    padding: 10px 15px;
+}
+
+.create-login-button{
+    font-weight: bold;
+    font-family: poppins;
+    padding: 10px 15px;
+    border: 2px solid #FFC0B8; 
+    color: #004236;
+}
+.create-login-button:hover {
+    background-color: #FFC0B8;
+    border: 2px solid #FFC0B8; 
+    color: #004236;
+    font-weight: bold;
+    font-family: poppins;
+    padding: 10px 15px;
+}
+  .modal-title{
+      font-family: 'poppins';
+      font-weight: bold;
+  }
+  .password-input-container {
+    position: relative;
+  }
+  
+  .password-input-container .eye-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-130%);
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .form-group {
+    margin-bottom: 1em;
+    position: relative;
+  }
+  
+  .form-label {
+    padding: 0 10px;
+    font-size: 1em;
+    display: block;
+    opacity: 1;
+    transform: translateY(-2.25em);
+    transform-origin: 0 0;
+    transition: all .3s;
+  }
+  
+  .form-control {
+    transition: all .5s;
+    padding: 10px;
+   
+  }
+  
+  .form-control::placeholder {
+    color: transparent;
+  }
+  
+  .form-control:focus,
+  .form-control:not(:placeholder-shown) {
+    border-color: #004236;
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .form-control:focus + .form-label,
+  .form-control:not(:placeholder-shown) + .form-label {
+    transform: translateY(-4.55em);
+  }
+  /* 
+  .form-group:focus-within {
+    transform: scale(1.05, 1.05);
+  } */
+  
+  
+  .has-error .form-control {
+    border-color: red;
+  }
+  
+  .has-error .form-label {
+    color: red;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+    font-size: 0.875em;
+  }
+  
+  .forgot-password-link {
+    color: #004236; /* Change this to your desired color */
+    text-decoration: none; /* Remove underline if desired */
+  }
+  
+  .forgot-password-link:hover {
+    color: #003225; /* Change this to your desired hover color */
+    text-decoration: underline; /* Add underline on hover if desired */
+  }
+  
+  .alert{
+    font-size: 0.9em;
+  }
