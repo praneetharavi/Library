@@ -1,0 +1,42 @@
+.add-new-book-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .form-group{
+    padding: 10px 0 10px 0;
+  }
+
+  label{
+    padding: 5px 0 5px 0;
+  }
+  
+  .image-preview {
+    margin-top: 10px;
+  }
+  
+  .image-preview img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+button {
+    font-weight: bold;
+    font-family: poppins;
+    padding: 10px 15px;
+    color: #FFC0B8;
+    background-color: #004236;
+    border: none; /* Optional: Remove border if desired */
+}
+
+button:hover {
+    background-color: #FFC0B8;
+    color: #004236;
+    font-weight: bold;
+    font-family: poppins;
+    padding: 10px 15px;
+}

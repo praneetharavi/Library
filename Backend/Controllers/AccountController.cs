@@ -1,23 +1,28 @@
 ﻿using Backend.Dtos.Account;
+using Backend.Interfaces;
 using Backend.Models;
+using Backend.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Rewrite;
-using System.Data;
 
 namespace Backend.Controllers
 {
     [Route("api/account")]
     [ApiController]
+    [EnableCors("AllowAngularApp")]
     public class AccountController : ControllerBase
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly ITokenService _tokenService;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager,ITokenService 
+            tokenService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _tokenService = tokenService;
         }
 
 
@@ -43,7 +48,9 @@ namespace Backend.Controllers
                     message = "Login successful",
                     role = roles.FirstOrDefault(),
                     firstName = user.FirstName,
-                    lastName = user.LastName
+                    lastName = user.LastName,
+                    userName = user.UserName,
+                    token = _tokenService.CreateToken(user)
                 });
             }
 
@@ -68,7 +75,8 @@ namespace Backend.Controllers
                     Email = registerDto.Email,
                     FirstName = registerDto.FirstName,
                     LastName = registerDto.LastName,
-                    Role = registerDto.Role
+                    Role = registerDto.Role ,
+                     
                 };
                 var createdUser = await _userManager.CreateAsync(appUser,registerDto.Password);
 
@@ -77,7 +85,18 @@ namespace Backend.Controllers
                     var roleResult = await _userManager.AddToRoleAsync(appUser, registerDto.Role);
                     if (roleResult.Succeeded)
                     {
-                        return Ok("User Created");
+                        return Ok(
+                            new NewUserDto
+                            {
+                                FirstName = appUser.FirstName,
+                                LastName = appUser.LastName,
+                                Email = appUser.Email,
+                                Role = appUser.Role,
+                                UserName = appUser.UserName,
+                                Token = _tokenService.CreateToken(appUser)
+                            }
+                            );
+                       
                     }
                     else
                     {
