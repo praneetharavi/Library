@@ -12,6 +12,7 @@ import { UserService } from '../services/user.service';
 })
 export class AllMembersComponent {
  members : any[] = [];
+ errorMessage : string = ''
 
  constructor(private userService: UserService) { }
 
@@ -19,9 +20,7 @@ export class AllMembersComponent {
    this.loadCustomers();
  }
  loadCustomers() {
-  this.userService.getCustomers()
-    .subscribe(
-      (data) => {
+  this.userService.getCustomers().subscribe((data : any) => {
         this.members = data;
       },
       (error) => {

@@ -162,7 +162,7 @@ namespace Backend.Controllers
 
        
         [HttpGet("getAllCustomers")]
-        [Authorize(Policy = "RequireLibrarianRole")]
+        [Authorize(Roles = Roles.Librarian)]
         public async Task<IActionResult> GetCustomers()
         {
             var customers = await _userManager.GetUsersInRoleAsync(Roles.Customer);
