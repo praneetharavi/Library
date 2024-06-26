@@ -23,5 +23,5 @@ namespace Backend.Dtos.Account
     [Required]
     public string? Role { get; set; }
 
-}
+    }
 }

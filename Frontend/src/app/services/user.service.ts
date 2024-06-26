@@ -49,6 +49,11 @@ export class UserService {
     this.role = null;
   }
 
+
+  getCustomers(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl+'/getAllCustomers');
+  }
+
   get isLoggedIn(): boolean {
     return this.isAuthenticated;
   }

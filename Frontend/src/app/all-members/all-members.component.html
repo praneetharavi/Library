@@ -1,1 +1,26 @@
-<p>all-members works!</p>
+<div class="all-members-container mt-4">
+    <h2>Library Members</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Library Card Number</th>
+          <th>No of Books Checkout</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let member of members; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ member.firstName }}</td>
+          <td>{{ member.lastName }}</td>
+          <td>{{ member.email }}</td>
+          <td>{{ member.libraryCardNumber }}</td>
+          <td>{{ member.numberOfBooksCheckedOut }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

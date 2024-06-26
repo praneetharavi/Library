@@ -1,23 +1,20 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Backend.Models
+namespace Backend.Dtos.Account
 {
-    public class User : IdentityUser
+    public class CustomerDto
     {
-
-        [Required]
+       
         public string FirstName { get; set; }
 
-        [Required]
         public string LastName { get; set; }
 
-        [Required]
-        public string Role { get; set; }
+        public string Email { get; set; }
 
         public string? LibraryCardNumber { get; set; }
-    }
 
+        public int? NumberOfBooksCheckedOut { get; set; }
+    }
 }
 

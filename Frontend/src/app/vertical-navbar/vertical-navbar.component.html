@@ -1,10 +1,9 @@
-<!-- src/app/components/vertical-navbar/vertical-navbar.component.html -->
 <nav class="navbar navbar-light bg-light flex-column">
-    <a class="navbar-brand" href="#">Dashboard</a>
-    <a class="nav-link" href="#">Add New Book</a>
-    <a class="nav-link" href="#">Edit/Remove Book</a>
-    <a class="nav-link" href="#">Latest Checkouts</a>
-    <a class="nav-link" href="#">Overdue Checkouts</a>
-    <a class="nav-link" href="#">All Members</a>
+    <a class="navbar-brand" [routerLink]="['/dashboard']">Dashboard</a>
+    <a class="nav-link" [routerLink]="['/add-new-book']">Add New Book</a>
+    <a class="nav-link" [routerLink]="['/edit-remove-book']">Edit/Remove Book</a>
+    <a class="nav-link" [routerLink]="['/latest-checkouts']">Latest Checkouts</a>
+    <a class="nav-link" [routerLink]="['/overdue-checkouts']">Overdue Checkouts</a>
+    <a class="nav-link" [routerLink]="['/all-members']">All Members</a>
   </nav>
   

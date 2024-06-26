@@ -61,11 +61,11 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
 
 builder.Services.AddAuthentication(options =>
 {
-    options.DefaultAuthenticateScheme =
-    options.DefaultChallengeScheme =
-    options.DefaultForbidScheme =
-    options.DefaultScheme =
-    options.DefaultSignInScheme =
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultForbidScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultSignOutScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(options =>
 {
@@ -83,6 +83,13 @@ builder.Services.AddAuthentication(options =>
 
 });
 
+
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("RequireLibrarianRole", policy =>
+        policy.RequireRole("Librarian"));
+});
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddCors(options =>
 {
@@ -108,7 +115,6 @@ app.UseHttpsRedirection();
 app.UseCors("AllowAngularApp");
 
 app.UseAuthentication();
-
 app.UseAuthorization();
 
 app.MapControllers();
