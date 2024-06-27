@@ -1,0 +1,21 @@
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .star-rating {
+    display: inline-block;
+  }
+  .star {
+    display: inline-block;
+  }
+  .star-svg {
+    transition: fill 0.2s;
+  }
+  .filled {
+    fill: #f3c612; /* Fill color for filled stars */
+  }
+  .container {
+    padding-top: 20px;
+  }
+  

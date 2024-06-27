@@ -7,6 +7,7 @@ import { AllMembersComponent } from './all-members/all-members.component';
 import { EditRemoveBookComponent } from './edit-remove-book/edit-remove-book.component';
 import { LatestCheckoutsComponent } from './latest-checkouts/latest-checkouts.component';
 import { OverdueCheckoutsComponent } from './overdue-checkouts/overdue-checkouts.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent } ,
@@ -17,4 +18,5 @@ export const routes: Routes = [
     { path: 'latest-checkouts', component: LatestCheckoutsComponent },
     { path: 'overdue-checkouts', component: OverdueCheckoutsComponent },
     { path: 'all-members', component: AllMembersComponent },
+    { path: 'book/:id', component: BookDetailsComponent }
 ];

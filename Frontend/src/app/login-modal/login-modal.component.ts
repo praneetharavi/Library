@@ -65,6 +65,7 @@ export class LoginModalComponent {
         response => {
           if (response) {
             this.authService.setToken(response.token);
+            this.authService.setLoggedInUser(response);
             this.errorMessage = '';
             document.getElementById("closeModalButton")?.click();
        

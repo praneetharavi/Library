@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "30FDNj+Ae1E=",
+  "dgSpecHash": "MNNQfwraC+I=",
   "success": true,
   "projectFilePath": "C:\\Users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vamsi\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\vamsi\\.nuget\\packages\\bogus\\35.5.1\\bogus.35.5.1.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.4\\microsoft.aspnet.identity.core.2.2.4.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.6\\microsoft.aspnetcore.authentication.jwtbearer.8.0.6.nupkg.sha512",

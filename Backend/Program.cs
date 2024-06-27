@@ -92,6 +92,7 @@ builder.Services.AddAuthorization(options =>
 });
 
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<BookDataSeeder>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp",
@@ -102,6 +103,12 @@ builder.Services.AddCors(options =>
 
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var seeder = scope.ServiceProvider.GetRequiredService<BookDataSeeder>();
+    seeder.SeedBooks(30);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

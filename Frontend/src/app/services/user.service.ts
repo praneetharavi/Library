@@ -27,7 +27,7 @@ export class UserService {
     return this.http.post<any>(`${this.apiUrl}/login`, body, { headers }).pipe(
       map(response => {
         if (response && response.token) {
-          localStorage.setItem('currentUser', JSON.stringify(response));
+          sessionStorage.setItem('currentUser', JSON.stringify(response));
         }
         return response;
       })
@@ -40,11 +40,11 @@ export class UserService {
   } 
   
   getCurrentUser(): any {
-    return JSON.parse(localStorage.getItem('currentUser') || '{}');
+    return JSON.parse(sessionStorage.getItem('currentUser') || '{}');
   }
 
   logout(): void {
-    localStorage.removeItem('currentUser');
+    sessionStorage.removeItem('currentUser');
     this.isAuthenticated = false;
     this.role = null;
   }

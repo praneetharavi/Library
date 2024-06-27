@@ -143,3 +143,4 @@ C:\Users\vamsi\desktop\troywebconsulting\library\backend\bin\Debug\net8.0\Micros
 C:\Users\vamsi\desktop\troywebconsulting\library\backend\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\vamsi\desktop\troywebconsulting\library\backend\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\vamsi\Desktop\TroyWebConsulting\Library\Backend\bin\Debug\net8.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\vamsi\desktop\troywebconsulting\library\backend\bin\Debug\net8.0\Bogus.dll

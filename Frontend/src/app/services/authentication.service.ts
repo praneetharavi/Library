@@ -8,10 +8,19 @@ export class AuthenticationService {
   private isAuthenticated = false;
   private userRole: 'customer' | 'librarian' | null = null;
   private tokenKey = 'authToken';
+  private loggedInUser: any;
+  
   constructor() {
 
   }
 
+  setLoggedInUser(user: any): void {
+    this.loggedInUser = user;
+  }
+
+  getLoggedInUser(): any {
+    return this.loggedInUser;
+  }
 
 
 

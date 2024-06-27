@@ -9,24 +9,18 @@
     height: 60px;
     width: 120px;
 }
-.navbar {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    padding: 20px 40px;
-    background-color: #F4E9DF ;
-}
 
-.navbar-brand img {
-    height: 60px;
-    width: 120px;
-}
 .buttonlogin {
     font-weight: bold;
     font-family: poppins;
     padding: 10px 15px;
     color: #FFC0B8;
     background-color: #004236;
-    border: none; /* Optional: Remove border if desired */
+    border: none;
+}
+
+.dropdown{
+    padding: 0 20px;
 }
 
 .buttonlogin:hover {
@@ -35,4 +29,13 @@
     font-weight: bold;
     font-family: poppins;
     padding: 10px 15px;
+}
+
+.dropdown-menu {
+    display: block !important; /* Force visibility */
+}
+ 
+.dropdown-item:hover{
+    background-color: #FFC0B8;
+    color: #004236;
 }

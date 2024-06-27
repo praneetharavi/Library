@@ -160,34 +160,45 @@ namespace Backend.Controllers
         }
 
 
-       
+
         [HttpGet("getAllCustomers")]
         [Authorize(Roles = Roles.Librarian)]
         public async Task<IActionResult> GetCustomers()
         {
-            var customers = await _userManager.GetUsersInRoleAsync(Roles.Customer);
-
-            var customerDtos = new List<CustomerDto>();
-
-            foreach (var user in customers)
+            try
             {
-                var borrowedBooksCount = await _dbContext.Borrowings
-                    .Where(b => b.UserId == user.Id && b.ReturnedDate == null)
-                    .CountAsync();
+                var customers = await _userManager.GetUsersInRoleAsync(Roles.Customer);
 
-                var customerDto = new CustomerDto
+                var customerDtos = new List<CustomerDto>();
+
+                foreach (var user in customers)
                 {
-                    FirstName = user.FirstName,
-                    LastName = user.LastName,
-                    Email = user.Email,
-                    LibraryCardNumber = user.LibraryCardNumber,
-                    NumberOfBooksCheckedOut = borrowedBooksCount
-                };
+                    var borrowedBooksCount = await _dbContext.Borrowings
+                        .Where(b => b.UserId == user.Id && b.ReturnedDate == null)
+                        .CountAsync();
 
-                customerDtos.Add(customerDto);
+                    var customerDto = new CustomerDto
+                    {
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        Email = user.Email,
+                        LibraryCardNumber = user.LibraryCardNumber,
+                        NumberOfBooksCheckedOut = borrowedBooksCount
+                    };
+
+                    customerDtos.Add(customerDto);
+                }
+
+                return Ok(customerDtos);
             }
-
-            return Ok(customerDtos);
+            catch (Exception ex)
+            {
+                // Log the exception for debugging purposes
+                // Replace with appropriate logging mechanism based on your application's logging strategy
+                Console.WriteLine($"Error in GetCustomers: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
         }
+
     }
 }

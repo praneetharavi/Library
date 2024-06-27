@@ -1,12 +1,38 @@
-<!-- src/app/components/navbar-customer/navbar-customer.component.html -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"> <img src="librarylogo.png" alt="Library Logo"></a>
-    <form class="form-inline mx-auto">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    <button class="btn btn-outline-warning ml-2">Wishlist</button>
-    <button class="btn btn-outline-info ml-2">Cart</button>
-    <button class="btn btn-outline-dark ml-auto">Profile</button>
-  </nav>
-  
+<!-- customer.component.html -->
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">
+    <img src="librarylogo.png" alt="Library Logo">
+  </a>
+  <form class="form-inline mx-auto" (submit)="searchBooks()">
+    <div class="input-group">
+      <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search by title, author" aria-label="Search"
+      [(ngModel)]="searchTerm" name="searchTerm" (input)="onSearchInput()">
+
+      <div class="input-group-append">
+        <button class="btn btn-search" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Dropdown section -->
+  <div *ngIf="showDropdown" class="dropdown-menu">
+    <ul class="dropdown-list">
+      <li *ngFor="let book of searchResults" (click)="navigateToBookDetails(book)">
+        {{ book.title }} by {{ book.author }}
+      </li>
+    </ul>
+  </div>
+
+  <button class="btn ml-2">
+    <i class="fas fa-heart" [style.color]="'#004236'"></i>
+  </button>
+  <button class="btn ml-2">
+    <i class="fas fa-shopping-cart" [style.color]="'#004236'"></i>
+  </button>
+  <button class="btn l-auto">
+    <i class="fas fa-user" [style.color]="'#004236'"></i>
+  </button>
+</nav>
