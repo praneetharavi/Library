@@ -1,0 +1,22 @@
+<div class="wishlist-container">
+  <a (click)="GotoHome()" class="btn btn-primary mb-3">
+    <i class="fas fa-home"></i> Home
+  </a>
+    <h2>My Wishlist</h2>
+    <div *ngIf="wishlistBooks.length === 0">
+      <p>No books in your wishlist.</p>
+    </div>
+    <div *ngFor="let book of wishlistBooks" class="wishlist-item">
+      <!-- Example book card -->
+      <div class="book-card">
+        <img [src]="book.coverImage" alt="Book Cover" class="book-cover">
+        <div class="book-details">
+          <h3>{{ book.title }}</h3>
+          <p>Author: {{ book.author }}</p>
+          <button class="btn btn-danger" (click)="removeFromWishlist(book.id)">Remove from Wishlist</button>
+          <button class="btn" (click)="MoveToCart(book.id)">Move To Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

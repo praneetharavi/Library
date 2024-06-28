@@ -1,0 +1,45 @@
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cart-item {
+    margin-bottom: 20px;
+  }
+  
+  .book-card {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-cover {
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+  
+  .book-details {
+    flex: 1;
+  }
+  
+  .book-details h3 {
+    margin-top: 0;
+  }
+  
+  .book-details p {
+    margin: 5px 0;
+  }
+  
+  .modal-body .d-flex {
+    display: flex;
+  }
+  
+  .modal-body .img-thumbnail {
+    max-width: 150px;
+    margin-right: 20px;
+  }
+  

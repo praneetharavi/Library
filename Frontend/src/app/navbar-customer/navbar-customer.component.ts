@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BookService } from '../services/book.service';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-navbar-customer',
@@ -16,8 +17,13 @@ export class NavbarCustomerComponent {
   books: any[] = [];
   searchResults: any[] = [];
   showDropdown: boolean = false;
+  searchQuery: string = '';
+  isDropdownOpen = false; 
+  user : any;
 
- constructor(private router: Router, private bookService: BookService) { }
+ constructor(private router: Router, private bookService: BookService, private authService : AuthenticationService) { 
+  this.user = this.authService.getLoggedInUser();
+ }
 
  ngOnInit(): void {
   this.getAllBooks();
@@ -54,9 +60,38 @@ getAllBooks() {
   }
 
   navigateToBookDetails(book: any) {
-    this.router.navigate(['/book-details', book.id]); // Assuming each book has an 'id'
+    this.router.navigate(['/book', book.id]); // Assuming each book has an 'id'
     this.showDropdown = false;
     this.searchTerm = '';
     this.searchResults = [];
+  }
+
+  onSearch() {
+    this.showDropdown = false;
+    this.router.navigate(['/search-results'], { queryParams: { query: this.searchTerm } });
+  }
+
+  goToWishlist(): void {
+    this.router.navigate(['/wishlist']);
+  }
+
+  goToCart(): void {
+    this.router.navigate(['/cart'])
+  }
+
+  logout(){
+    this.authService.logout();
+  }
+
+  toggleDropdown(){
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  goToProfile() {
+    this.router.navigate(['/profile']);
+  }
+
+  goToPastCheckouts() {
+    this.router.navigate(['/past-checkouts']);
   }
 }

@@ -16,6 +16,8 @@
             public DbSet<Borrowing> Borrowings { get; set; }
             public DbSet<Review> Reviews { get; set; }
 
+            public DbSet<UserBooks> UserBooks { get; set; }
+
 
             protected override void OnModelCreating(ModelBuilder modelBuilder)
             {
@@ -23,7 +25,9 @@
                 base.OnModelCreating(modelBuilder); // Ensure Identity models are configured
 
 
-                List<IdentityRole> roleList = new List<IdentityRole> {
+
+
+            List<IdentityRole> roleList = new List<IdentityRole> {
                    new IdentityRole
                    {
                        Name = Models.Roles.Librarian,
@@ -36,7 +40,6 @@
                     }
 
                 };
-
 
             modelBuilder.Entity<IdentityRole>().HasData(roleList);
 

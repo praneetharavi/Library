@@ -59,6 +59,7 @@ namespace Backend.Controllers
                     firstName = user.FirstName,
                     lastName = user.LastName,
                     userName = user.UserName,
+                    userId = user.Id,
                     token = _tokenService.CreateToken(user)
                 });
             }
@@ -118,6 +119,7 @@ namespace Backend.Controllers
                             Email = appUser.Email,
                             Role = registerDto.Role,
                             UserName = appUser.UserName,
+                            userId = appUser.Id,
                             LibraryCardNumber = appUser.LibraryCardNumber,
                             Token = _tokenService.CreateToken(appUser)
                         });

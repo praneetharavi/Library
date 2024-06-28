@@ -1,0 +1,39 @@
+<div class="borrowings-container">
+  <a (click)="GotoHome()" class="btn btn-primary mb-3">
+    <i class="fas fa-home"></i> Home
+  </a>
+  <h2>All Borrowings</h2>
+  <div *ngIf="borrowings.length === 0">
+    <p>No borrowings found.</p>
+  </div>
+  <table *ngIf="borrowings.length > 0" class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Cover Image</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Checkout Date</th>
+        <th>Return Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let borrowing of borrowings">
+        <td>
+          <img [src]="borrowing.coverImageUrl" alt="{{ borrowing.bookName }}" class="cover-image">
+        </td>
+        <td>{{ borrowing.bookName }}</td>
+        <td>{{ borrowing.author }}</td>
+        <td>{{ borrowing.borrowDate | date }}</td>
+        <td>{{ borrowing.returnDate | date }}</td>
+        <td>
+          <span *ngIf="borrowing.returnedDate; else notReturned">Returned</span>
+          <ng-template #notReturned>
+            <span *ngIf="today > borrowing.returnDate">Overdue</span>
+            <span *ngIf="today <= borrowing.returnDate">Due Soon</span>
+          </ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -13,6 +13,6 @@
 
         public DateTime ReturnDate { get; set; }
 
-
+        public string CoverImage { get; set; }
     }
 }

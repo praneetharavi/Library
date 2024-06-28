@@ -1,5 +1,3 @@
-<!-- customer.component.html -->
-
 <nav class="navbar navbar-expand-lg navbar-light">
   <a class="navbar-brand" href="#">
     <img src="librarylogo.png" alt="Library Logo">
@@ -7,32 +5,42 @@
   <form class="form-inline mx-auto" (submit)="searchBooks()">
     <div class="input-group">
       <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search by title, author" aria-label="Search"
-      [(ngModel)]="searchTerm" name="searchTerm" (input)="onSearchInput()">
+        [(ngModel)]="searchTerm" name="searchTerm" (ngModelChange)="onSearchInput();searchBooks();" >
 
       <div class="input-group-append">
-        <button class="btn btn-search" type="submit">
+        <button class="btn btn-search" type="submit" (click)="onSearch()">
           <i class="fas fa-search"></i>
         </button>
+      </div>
+
+      <!-- Dropdown section -->
+      <div *ngIf="showDropdown" class="dropdown-menu show">
+        <ul class="dropdown-list">
+          <li *ngFor="let book of searchResults" class="search-dropdown-item" (click)="navigateToBookDetails(book)">
+            {{ book.title }} by {{ book.author }}
+          </li>
+        </ul>
       </div>
     </div>
   </form>
 
-  <!-- Dropdown section -->
-  <div *ngIf="showDropdown" class="dropdown-menu">
-    <ul class="dropdown-list">
-      <li *ngFor="let book of searchResults" (click)="navigateToBookDetails(book)">
-        {{ book.title }} by {{ book.author }}
-      </li>
-    </ul>
-  </div>
-
-  <button class="btn ml-2">
+  <button class="btn ml-2" (click)="goToWishlist()">
     <i class="fas fa-heart" [style.color]="'#004236'"></i>
   </button>
-  <button class="btn ml-2">
+  <button class="btn ml-2" (click)="goToCart()">
     <i class="fas fa-shopping-cart" [style.color]="'#004236'"></i>
   </button>
-  <button class="btn l-auto">
-    <i class="fas fa-user" [style.color]="'#004236'"></i>
-  </button>
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle btn l-auto" id="navbarDropdown" role="button"
+           (click)="toggleDropdown()"><i class="fas fa-user" [style.color]="'#004236'"></i>
+        </a> 
+        <div *ngIf="isDropdownOpen" class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" (click)="goToProfile()">Profile</a>
+          <a class="dropdown-item" (click)="goToPastCheckouts()">My CheckOuts</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" (click)="logout()">Logout</a>
+        </div>
+      </li>
+</ul>
 </nav>

@@ -24,5 +24,8 @@ export class BookService {
     return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 
+  searchBooks(query: string): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl + `/search?query=${query}`);
+  }
 
 }

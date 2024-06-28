@@ -47,6 +47,17 @@ namespace Backend.Controllers
                 .ToList();
         }
 
+        [HttpGet("/search")]
+        public IActionResult SearchBooks(string query)
+        {
+            var results = _dbContext.Books
+                .Where(b => b.Title.Contains(query) || b.Author.Contains(query))
+                .ToList();
+            return Ok(results);
+        }
+
+
+
         [HttpPost]
         [Authorize(Roles = Roles.Librarian)]
         public IActionResult Create([FromBody] Book book)
@@ -99,7 +110,7 @@ namespace Backend.Controllers
             return NoContent();
         }
 
-        [HttpPut("return")]
+        [HttpPut("/return")]
         [Authorize(Roles = Roles.Librarian)]
         public IActionResult MarkAsReturned([FromBody] Borrowing borrowing)
         {
@@ -137,56 +148,7 @@ namespace Backend.Controllers
         }
 
 
-        [HttpGet("overdue")]
-        [Authorize(Roles = Roles.Librarian)]
-        public IActionResult GetOverdueCheckouts()
-        {
-            var overdueCheckouts = _dbContext.Borrowings
-                .Where(b => b.ReturnDate < DateTime.UtcNow && b.ReturnedDate == null) // overdue checkouts
-                .Include(b => b.User)
-                .Include(b => b.Book)
-                .Select(b => new CheckoutDto
-                {
-                    UserId = b.UserId,
-                    FirstName = b.User.FirstName,
-                    LastName = b.User.LastName,
-                    Email = b.User.Email,
-                    BookId = b.BookId,
-                    BookName = b.Book.Title,
-                    Author = b.Book.Author,
-                    BorrowDate = b.BorrowDate,
-                    ReturnDate = b.ReturnDate
-                })
-                .ToList();
-
-            return Ok(overdueCheckouts);
-        }
-    
-
-        [HttpGet("latest")]
-        [Authorize(Roles = Roles.Librarian)]
-        public IActionResult GetLatestCheckouts(int count = 10)
-        {
-            var latestCheckouts = _dbContext.Borrowings
-                .OrderByDescending(b => b.BorrowDate)
-                .Take(count)
-                .Include(b => b.User)
-                .Include(b => b.Book)
-                .Select(b => new CheckoutDto
-                {
-                    UserId = b.UserId,
-                    FirstName = b.User.FirstName,
-                    LastName = b.User.LastName,
-                    Email = b.User.Email,
-                    BookId = b.BookId,
-                    BookName = b.Book.Title,
-                    Author = b.Book.Author,
-                    BorrowDate = b.BorrowDate
-                })
-                .ToList();
-
-            return Ok(latestCheckouts);
-        }
+      
     }
 }
 

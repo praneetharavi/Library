@@ -1,0 +1,12 @@
+.card {
+    margin-right: 10px;
+  }
+  
+  .d-flex .card {
+    flex: 0 0 auto;
+  }
+  
+  .container {
+    padding-top: 20px;
+  }
+  

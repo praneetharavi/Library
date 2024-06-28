@@ -1,8 +1,10 @@
 ﻿using Backend.Data;
 using Backend.Dtos.Book;
 using Backend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 namespace Backend.Controllers
 {
@@ -19,10 +21,26 @@ namespace Backend.Controllers
             _dbContext = context;
         }
 
-        [HttpGet("{id}", Name = "GetBorrowingById")]
+        [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var borrowing = _dbContext.Borrowings.Find(id);
+            var borrowing = _dbContext.Borrowings
+                .Where(b => b.Id == id)
+                .Select(b => new CheckoutDto
+                {
+                    UserId = b.UserId,
+                    FirstName = b.User.FirstName,
+                    LastName = b.User.LastName,
+                    Email = b.User.Email,
+                    BookId = b.BookId,
+                    BookName = b.Book.Title,
+                    Author = b.Book.Author,
+                    BorrowDate = b.BorrowDate,
+                    ReturnDate = b.ReturnDate,
+                    CoverImage = b.Book.CoverImage
+                })
+                .FirstOrDefault();
+
             if (borrowing == null)
             {
                 return NotFound();
@@ -37,6 +55,65 @@ namespace Backend.Controllers
 
             var borrowings = _dbContext.Borrowings
                 .Where(b => b.UserId == userId)
+                .Select(b => new CheckoutDto
+                {
+                    UserId = b.UserId,
+                    FirstName = b.User.FirstName,
+                    LastName = b.User.LastName,
+                    Email = b.User.Email,
+                    BookId = b.BookId,
+                    BookName = b.Book.Title,
+                    Author = b.Book.Author,
+                    BorrowDate = b.BorrowDate,
+                    ReturnDate = b.ReturnDate,
+                    CoverImage = b.Book.CoverImage
+                })
+                .ToList();
+
+            return Ok(borrowings);
+        }
+
+        [HttpGet("getAllCheckoutsbyUserId/{userId}")]
+        public IActionResult GetByUserId(string userId)
+        {
+            var borrowings = _dbContext.Borrowings
+                .Where(b => b.UserId == userId)
+                .Select(b => new CheckoutDto
+                {
+                    UserId = b.UserId,
+                    FirstName = b.User.FirstName,
+                    LastName = b.User.LastName,
+                    Email = b.User.Email,
+                    BookId = b.BookId,
+                    BookName = b.Book.Title,
+                    Author = b.Book.Author,
+                    BorrowDate = b.BorrowDate,
+                    ReturnDate = b.ReturnDate,
+                    CoverImage = b.Book.CoverImage
+                })
+                .ToList();
+
+            return Ok(borrowings);
+        }
+
+        [HttpGet("GetBorrowingsByBookId/{bookId}")]
+        public IActionResult GetByBookId(int bookId)
+        {
+            var borrowings = _dbContext.Borrowings
+                .Where(b => b.BookId == bookId)
+                .Select(b => new CheckoutDto
+                {
+                    UserId = b.UserId,
+                    FirstName = b.User.FirstName,
+                    LastName = b.User.LastName,
+                    Email = b.User.Email,
+                    BookId = b.BookId,
+                    BookName = b.Book.Title,
+                    Author = b.Book.Author,
+                    BorrowDate = b.BorrowDate,
+                    ReturnDate = b.ReturnDate,
+                    CoverImage = b.Book.CoverImage
+                })
                 .ToList();
 
             return Ok(borrowings);
@@ -67,11 +144,17 @@ namespace Backend.Controllers
                 UserId = request.UserId,
                 BookId = request.BookId,
                 BorrowDate = DateTime.UtcNow,
-                ReturnDate = DateTime.UtcNow.AddDays(14) // Example: Due date is 14 days from borrow date
+                ReturnDate = DateTime.UtcNow.AddDays(5) 
             };
 
             _dbContext.Borrowings.Add(borrowing);
             book.CopiesAvailable--; // Decrease copies available
+
+            var userBook = _dbContext.UserBooks.FirstOrDefault(ub => ub.UserId == request.UserId && ub.BookId == request.BookId);
+            if (userBook != null)
+            {
+                userBook.IsInCart = false;
+            }
 
             _dbContext.SaveChanges();
 
@@ -109,11 +192,18 @@ namespace Backend.Controllers
                     UserId = request.UserId,
                     BookId = book.Id,
                     BorrowDate = DateTime.UtcNow,
-                    ReturnDate = DateTime.UtcNow.AddDays(14) // Example: Due date is 14 days from borrow date
+                    ReturnDate = DateTime.UtcNow.AddDays(5) 
                 };
 
                 borrowings.Add(borrowing);
-                book.CopiesAvailable--; // Decrease copies available
+                book.CopiesAvailable--;
+
+                var userBook = _dbContext.UserBooks.FirstOrDefault(ub => ub.UserId == request.UserId && ub.BookId == book.Id);
+                if (userBook != null)
+                {
+                    userBook.IsInCart = false;
+                }
+
                 _dbContext.Borrowings.Add(borrowing);
             }
 
@@ -122,6 +212,58 @@ namespace Backend.Controllers
             return CreatedAtAction(nameof(GetAll), borrowings);
         }
 
+        [HttpGet("/overdueCheckouts")]
+        [Authorize(Roles = Roles.Librarian)]
+        public IActionResult GetOverdueCheckouts()
+        {
+            var overdueCheckouts = _dbContext.Borrowings
+                .Where(b => b.ReturnDate < DateTime.UtcNow && b.ReturnedDate == null) // overdue checkouts
+                .Include(b => b.User)
+                .Include(b => b.Book)
+                .Select(b => new CheckoutDto
+                {
+                    UserId = b.UserId,
+                    FirstName = b.User.FirstName,
+                    LastName = b.User.LastName,
+                    Email = b.User.Email,
+                    BookId = b.BookId,
+                    BookName = b.Book.Title,
+                    Author = b.Book.Author,
+                    BorrowDate = b.BorrowDate,
+                    ReturnDate = b.ReturnDate,
+                    CoverImage = b.Book.CoverImage
+                })
+                .ToList();
+
+            return Ok(overdueCheckouts);
+        }
+
+
+        [HttpGet("/latestCheckouts")]
+        [Authorize(Roles = Roles.Librarian)]
+        public IActionResult GetLatestCheckouts(int count = 10)
+        {
+            var latestCheckouts = _dbContext.Borrowings
+                .OrderByDescending(b => b.BorrowDate)
+                .Take(count)
+                .Include(b => b.User)
+                .Include(b => b.Book)
+                .Select(b => new CheckoutDto
+                {
+                    UserId = b.UserId,
+                    FirstName = b.User.FirstName,
+                    LastName = b.User.LastName,
+                    Email = b.User.Email,
+                    BookId = b.BookId,
+                    BookName = b.Book.Title,
+                    Author = b.Book.Author,
+                    BorrowDate = b.BorrowDate,
+                    CoverImage = b.Book.CoverImage
+                })
+                .ToList();
+
+            return Ok(latestCheckouts);
+        }
 
     }
 }
