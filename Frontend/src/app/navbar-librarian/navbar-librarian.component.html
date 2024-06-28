@@ -2,10 +2,33 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#"> <img src="librarylogo.png" alt="Library Logo"></a>
 
+    <form class="form-inline mx-auto" (submit)="searchBooks()">
+        <div class="input-group">
+          <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search by title, author" aria-label="Search"
+            [(ngModel)]="searchTerm" name="searchTerm" (ngModelChange)="onSearchInput();searchBooks();" >
+    
+          <div class="input-group-append">
+            <button class="btn btn-search" type="submit" (click)="onSearch()">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+    
+          <!-- Dropdown section -->
+          <div *ngIf="showDropdown" class="dropdown-menu show">
+            <ul class="dropdown-list">
+              <li *ngFor="let book of searchResults" class="search-dropdown-item" (click)="navigateToBookDetails(book)">
+                {{ book.title }} by {{ book.author }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </form>
+      
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         Welcome, {{ user.userName }}

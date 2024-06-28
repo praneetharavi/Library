@@ -42,4 +42,11 @@ export class BorrowService {
   GetBorrowingsByBookId(bookId : any):Observable<any>{
     return this.http.get<any>(`${this.apiUrl}/GetBorrowingsByBookId/${bookId}`);
   }
+  getOverdueCheckouts(count: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/overdueCheckouts?count=${count}`);
+  }
+
+  getLatestCheckouts(count: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/latestCheckouts?count=${count}`);
+  }
 }

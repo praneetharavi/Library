@@ -1,5 +1,7 @@
 <div class="add-new-book-container">
   <h3>Add New Book</h3>
+  <p *ngIf="successMessage" class="text-success">{{ successMessage }}</p>
+  <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
     <form [formGroup]="addBookForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="title">Title</label>

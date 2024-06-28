@@ -28,4 +28,20 @@ export class BookService {
     return this.http.get<any[]>(this.apiUrl + `/search?query=${query}`);
   }
 
+  createBook(book: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}`, book);
+  }
+
+  updateBook(id: number, book: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${id}`, book);
+  }
+
+  deleteBook(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
+  }
+
+  markAsReturned(borrowing: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/return`, borrowing);
+  }
 }
+

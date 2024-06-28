@@ -1,1 +1,46 @@
-<p>latest-checkouts works!</p>
+<div class="container">
+    <div class="latest-checkouts-container">
+        <h2>Latest Checkouts</h2>
+        <div class="filter-container">
+            <label>Number of Checkouts:</label>
+            <select [(ngModel)]="count" (change)="getLatestCheckouts()">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="0">All</option>
+            </select>
+          </div>
+        
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Email</th>
+              <th>Book Title</th>
+              <th>Author</th>
+              <th>Checkout Date</th>
+              <th>Return Date</th>
+              <th>Mark as Returned</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let checkout of latestCheckouts">
+              <td>{{ checkout.firstName }} {{ checkout.lastName }}</td>
+              <td>{{ checkout.email }}</td>
+              <td>{{ checkout.bookName }}</td>
+              <td>{{ checkout.author }}</td>
+              <td>{{ checkout.borrowDate | date }}</td>
+              <td>{{ checkout.returnDate | date }}</td>
+              <td>
+                <input type="checkbox" 
+                       [disabled]="checkout.returnedDate !== null" 
+                       (change)="markAsReturned(checkout)">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      
+      </div>
+      
+</div>

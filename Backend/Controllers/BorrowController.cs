@@ -212,12 +212,13 @@ namespace Backend.Controllers
             return CreatedAtAction(nameof(GetAll), borrowings);
         }
 
-        [HttpGet("/overdueCheckouts")]
+        [HttpGet("overdueCheckouts")]
         [Authorize(Roles = Roles.Librarian)]
-        public IActionResult GetOverdueCheckouts()
+        public IActionResult GetOverdueCheckouts(int count = 10)
         {
             var overdueCheckouts = _dbContext.Borrowings
-                .Where(b => b.ReturnDate < DateTime.UtcNow && b.ReturnedDate == null) // overdue checkouts
+                .Where(b => b.ReturnDate < DateTime.UtcNow && b.ReturnedDate == null)
+                .Take(count)
                 .Include(b => b.User)
                 .Include(b => b.Book)
                 .Select(b => new CheckoutDto
@@ -239,7 +240,7 @@ namespace Backend.Controllers
         }
 
 
-        [HttpGet("/latestCheckouts")]
+        [HttpGet("latestCheckouts")]
         [Authorize(Roles = Roles.Librarian)]
         public IActionResult GetLatestCheckouts(int count = 10)
         {
