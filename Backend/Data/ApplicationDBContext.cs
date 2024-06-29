@@ -61,9 +61,13 @@
                     .HasOne(r => r.Book)
                     .WithMany()
                     .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<Review>()
+               .HasOne(r => r.Book)
+               .WithMany(b => b.Reviews)
+               .HasForeignKey(r => r.BookId);
 
-                // Configure IdentityUserLogin primary key
-                modelBuilder.Entity<IdentityUserLogin<string>>().HasKey(x => new { x.LoginProvider, x.ProviderKey });
+            // Configure IdentityUserLogin primary key
+            modelBuilder.Entity<IdentityUserLogin<string>>().HasKey(x => new { x.LoginProvider, x.ProviderKey });
             }
         }
     }

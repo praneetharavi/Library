@@ -18,6 +18,7 @@ export class CartComponent {
   cartBooks: any[] = []; 
   userId : any;
   selectedBook: any;
+  errorMessage: string = '';
 
   constructor(private cartService: CartService, private authService : AuthenticationService
     ,private router : Router, private borrowService : BorrowService
@@ -34,7 +35,7 @@ export class CartComponent {
     this.cartService.getAllBooksFromCart(this.userId)
       .subscribe(
         response => {
-          this.cartBooks = response.books; // Adjust property based on API response structure
+          this.cartBooks = response.books;
         },
         error => {
           console.error('Error loading cart:', error);
@@ -47,7 +48,10 @@ export class CartComponent {
       .subscribe(
         response => {
           console.log('Book removed from cart:', response.message);
-          this.loadCart(); // Refresh cart after removal
+          this.loadCart(); 
+          if(this.areAllBooksAvailable()){
+            this.errorMessage = '';
+          }
         },
         error => {
           console.error('Error removing book from cart:', error);
@@ -56,8 +60,9 @@ export class CartComponent {
   }
   checkoutBook(book: any): void {
     this.selectedBook = book;
-    this.borrowService.Checkout(this.userId, book).subscribe((response) => {
+    this.borrowService.Checkout(this.userId, book.id).subscribe((response) => {
       this.showModal(this.checkoutModal);
+      this.loadCart();
     });
   }
 
@@ -65,17 +70,24 @@ export class CartComponent {
     this.closeModal();
     this.router.navigate(['/past-checkouts']);
   }
+  private areAllBooksAvailable(): boolean {
+    return this.cartBooks.every(book => book.availability > 0);
+  }
 
   checkoutAll(): void {
-    const bookIds = this.cartBooks.map(book => book.id);
-    this.borrowService.multipleCheckout(this.userId, bookIds).subscribe(
-      (response) => {
-        this.loadCart();
-      },
-      (error) => {
-        console.error('Failed to checkout all books', error);
-      }
-    );
+    if (this.areAllBooksAvailable()) {
+      const bookIds = this.cartBooks.map(book => book.id);
+      this.borrowService.multipleCheckout(this.userId, bookIds).subscribe(
+        response => {
+          this.loadCart();
+        },
+        error => {
+          console.error('Failed to checkout all books', error);
+        }
+      );
+    } else {
+      this.errorMessage = 'Some of the items in your cart are unavailable.';
+    }
   }
 
   private showModal(modalElement: ElementRef): void {

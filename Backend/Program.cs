@@ -87,9 +87,16 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization(options =>
 {
+    options.AddPolicy("RequireCustomerRole", policy =>
+        policy.RequireRole(Roles.Customer));
     options.AddPolicy("RequireLibrarianRole", policy =>
         policy.RequireRole(Roles.Librarian));
+    options.AddPolicy("LoggedInPolicy", policy =>
+       policy.RequireAuthenticatedUser());
 });
+
+
+
 
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<BookDataSeeder>();

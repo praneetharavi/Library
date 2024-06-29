@@ -10,6 +10,9 @@
     width: 120px;
 }
 
+.fa-shopping-cart:hover{
+color: #FFC0B8;
+}
 .buttonlogin {
     font-weight: bold;
     font-family: poppins;

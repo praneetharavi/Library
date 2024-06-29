@@ -26,11 +26,6 @@ aria-hidden="true">
                     </div>
                     
                     <div class="d-grid gap-2">
-                        <div class="form-check mb-3">
-                            <input type="checkbox" class="form-check-input" id="rememberMe">
-                            <label class="form-check-label" for="rememberMe">Remember me</label>
-                            <a href="#" class="float-end forgot-password-link">Forgot your password?</a>
-                        </div>
                         <div *ngIf="errorMessage" class="alert alert-danger">
                             {{ errorMessage }}
                           </div>
@@ -69,13 +64,13 @@ aria-hidden="true">
                     </div>
                     
                     <div class="mb-3 form-group" [ngClass]="{'has-error': signupForm.get('role')?.invalid && signupForm.get('role')?.touched}">
-                        
                         <select formControlName="role" id="role" class="form-select" required>
-                            <option value="">Select Role</option>
+                            <option value="" disabled selected>Select Role</option>
                             <option value="Librarian">Librarian</option>
                             <option value="Customer">Customer</option>
                         </select>
                     </div>
+                    
                     
                     <div *ngIf="errorMessage" class="alert alert-danger">
                         {{ errorMessage }}

@@ -37,8 +37,9 @@ export class CustomerDashboardComponent {
     });
   }
 
+
+
   ngOnInit(): void {
-    // Initial filtering
     this.applyFilter({ target: { value: this.filterType } });
   }
 

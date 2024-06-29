@@ -1,50 +1,60 @@
 <div class="cart-container">
-  <a (click)="GotoHome()" class="btn btn-primary mb-3">
+  <a (click)="GotoHome()" class="btn button-class mb-3">
     <i class="fas fa-home"></i> Home
   </a>
-    <h2>My Cart</h2>
-    <div *ngIf="cartBooks.length === 0">
-      <p>No books in your cart.</p>
+  <h2>My Cart</h2>
+  <div *ngIf="cartBooks.length === 0">
+    <p>No books in your cart.</p>
+  </div>
+  <div *ngIf="cartBooks.length > 0">
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-class" (click)="checkoutAll()">Checkout All</button>
     </div>
-    <div *ngIf="cartBooks.length > 0">
-      <button class="btn btn-success" (click)="checkoutAll()">Checkout All</button>
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
     </div>
-    <div *ngFor="let book of cartBooks" class="cart-item">
-      <div class="book-card">
-        <img [src]="book.coverImage" alt="Book Cover" class="book-cover">
-        <div class="book-details">
-          <h3>{{ book.title }}</h3>
-          <p>Author: {{ book.author }}</p>
-          <button class="btn btn-danger" (click)="removeFromCart(book.id)">Remove from Cart</button>
-          <button class="btn btn-primary" (click)="checkoutBook(book.id)">CheckOut</button>
-        </div>
+  </div>
+  <div *ngFor="let book of cartBooks" class="cart-item">
+    <div class="book-card">
+      <img [src]="book.coverImage" alt="Book Cover" class="book-cover">
+      <div class="book-details">
+        <h3>{{ book.title }}</h3>
+        <p>Author: {{ book.author }}</p>
+        <button class="btn button-class" (click)="removeFromCart(book.id)">Remove from Cart</button>
+        <button class="btn button-class1" 
+                (click)="book.copiesAvailable > 0 ? checkoutBook(book) : null"
+                [disabled]="book.copiesAvailable === 0">
+          Checkout
+        </button>
+        <span *ngIf="book.copiesAvailable === 0" class="text-danger" style="padding: 10px;">No copies available at this moment.</span>
       </div>
     </div>
   </div>
-  
+</div>
+
   
 
-  <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+  <div class="modal fade" #checkoutModal tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="checkoutModalLabel">Book Moved to Cart</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" id="closeModalButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()">
           </button>
         </div>
         <div class="modal-body">
-          <div class="d-flex">
-            <img [src]="selectedBook?.coverImage" alt="Book Cover" class="img-thumbnail mr-3">
-            <div>
-              <h5>{{ selectedBook?.title }}</h5>
-              <p>Author: {{ selectedBook?.author }}</p>
+          <div class="row">
+            <div class="col-md-4">
+              <img [src]="selectedBook?.coverImage" class="img-fluid" alt="{{ selectedBook?.title }}">
+            </div>
+            <div class="col-md-8">
+              <h4>{{ selectedBook?.title }}</h4>
+                <h5>by {{ selectedBook?.author }}</h5> 
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="navigateToPastCheckouts()">Go to Your Books</button>
+          <button type="button" class="btn button-class" (click)="navigateToPastCheckouts()">Go to My Checkouts</button>
         </div>
       </div>
     </div>

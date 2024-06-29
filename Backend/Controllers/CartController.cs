@@ -1,13 +1,17 @@
 ﻿using Backend.Data;
 using Backend.Dtos.Book;
 using Backend.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Backend.Controllers
 {
+    [Authorize(Policy = "LoggedInPolicy")]
     [Route("/api/cart")]
     [ApiController]
+    [EnableCors("AllowAngularApp")]
     public class CartController : ControllerBase
     {
 

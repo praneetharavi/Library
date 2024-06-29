@@ -27,7 +27,7 @@ export class LatestCheckoutsComponent {
     }); 
   }
   markAsReturned(borrowing: any) {
-    this.bookService.markAsReturned(borrowing).subscribe(() => {
+    this.bookService.markAsReturned(borrowing.borrowingId).subscribe(() => {
       this.getLatestCheckouts();
     });
   }

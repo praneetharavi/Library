@@ -1,3 +1,24 @@
 .all-members-container{
-    padding: 100px 30px 0 200px;
+    padding: 100px 30px 0 250px;
+}
+h3{
+    font-family: 'Poppins';
+    font-size: 1.5em;
+    color: #004236;
+    font-weight: bold;
+  }
+.button-class{
+    font-weight: bold;
+    font-family: poppins;
+    padding: 10px 15px;
+    border: 2px solid #FFC0B8; 
+    color: #004236;
+}
+.button-class:hover {
+    background-color: #FFC0B8;
+    border: 2px solid #FFC0B8; 
+    color: #004236;
+    font-weight: bold;
+    font-family: poppins;
+    padding: 10px 15px;
 }

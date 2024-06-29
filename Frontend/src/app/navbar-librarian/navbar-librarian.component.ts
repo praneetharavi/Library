@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { BookService } from '../services/book.service';
 import { FormsModule } from '@angular/forms';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navbar-librarian',
@@ -13,6 +14,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './navbar-librarian.component.css'
 })
 export class NavbarLibrarianComponent {
+  refreshBooksSubscription! : Subscription;
+  
   user : any;
   isDropdownOpen = false; 
   searchTerm: string = '';
@@ -30,6 +33,13 @@ export class NavbarLibrarianComponent {
 
  ngOnInit(): void {
   this.getAllBooks();
+  this.refreshBooksSubscription = this.bookService.refreshBooks$.subscribe(() => {
+    this.getAllBooks();
+  });
+}
+
+ngOnDestroy(): void {
+  this.refreshBooksSubscription.unsubscribe();
 }
   logout(){
     this.authService.logout();
@@ -61,18 +71,18 @@ export class NavbarLibrarianComponent {
       }
     }
   
-    onSearchInput() {
-      if (this.searchTerm.trim() === '') {
-        this.showDropdown = false;
-        this.searchResults = [];
-      }
-    }
+
   
     navigateToBookDetails(book: any) {
       this.router.navigate(['/book', book.id]); // Assuming each book has an 'id'
       this.showDropdown = false;
       this.searchTerm = '';
       this.searchResults = [];
+    }
+  
+    submitSearch(event: Event) {
+      event.preventDefault(); // Prevent the default form submission
+      this.onSearch();
     }
   
     onSearch() {

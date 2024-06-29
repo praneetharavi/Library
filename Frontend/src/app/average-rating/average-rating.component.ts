@@ -21,7 +21,7 @@ export class AverageRatingComponent {
       if (i < roundedRating) {
         this.starList.push(true); 
       } else {
-        this.starList.push(false); // Empty star
+        this.starList.push(false); 
       }
     }
   }

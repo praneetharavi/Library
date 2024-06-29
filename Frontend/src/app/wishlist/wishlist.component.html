@@ -1,5 +1,5 @@
 <div class="wishlist-container">
-  <a (click)="GotoHome()" class="btn btn-primary mb-3">
+  <a (click)="GotoHome()" class="btn button-class mb-3">
     <i class="fas fa-home"></i> Home
   </a>
     <h2>My Wishlist</h2>
@@ -12,11 +12,36 @@
         <img [src]="book.coverImage" alt="Book Cover" class="book-cover">
         <div class="book-details">
           <h3>{{ book.title }}</h3>
-          <p>Author: {{ book.author }}</p>
-          <button class="btn btn-danger" (click)="removeFromWishlist(book.id)">Remove from Wishlist</button>
-          <button class="btn" (click)="MoveToCart(book.id)">Move To Cart</button>
+          <p>By {{ book.author }}</p>
+          <button class="btn button-class" (click)="removeFromWishlist(book.id)">Remove from Wishlist</button>
+          <button class="btn button-class1" (click)="MoveToCart(book)">Move To Cart</button>
         </div>
       </div>
     </div>
   </div>
   
+  <div class="modal fade" #wishlistModal tabindex="-1" role="dialog" aria-labelledby="wishlistModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="wishlistModalLabel">Book Moved to Cart</h5>
+          <button type="button" id="closeModalButton" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()">
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4">
+              <img [src]="selectedBook?.coverImage" class="img-fluid" alt="{{ selectedBook?.title }}">
+            </div>
+            <div class="col-md-8">
+              <h4>{{ selectedBook?.title }}</h4>
+                <h5> by {{ selectedBook?.author }}</h5>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn button-class" (click)="GoToCart()">Go to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>

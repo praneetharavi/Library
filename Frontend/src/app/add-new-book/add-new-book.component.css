@@ -1,9 +1,20 @@
 .add-new-book-container {
     max-width: 600px;
-    margin: 80px auto auto auto;
+    margin: 100px auto auto auto;
     padding: 20px;
   }
 
+  h3{
+    font-family: 'Poppins';
+    font-size: 1.5em;
+    color: #004236;
+    font-weight: bold;
+  }
+  
+  img{
+    height: 50px;
+    width: 50px;
+  }
   .form-group{
     padding: 10px 0 10px 0;
   }
@@ -11,6 +22,22 @@
   label{
     padding: 5px 0 5px 0;
   }
+
+  .button-class{
+    font-weight: bold;
+    font-family: poppins;
+    padding: 10px 15px;
+    background-color: #004236;
+    color: #FFC0B8;
+}
+.button-class:hover {
+    background-color: #FFC0B8;
+    color: #004236;
+    color: #004236;
+    font-weight: bold;
+    font-family: poppins;
+    padding: 10px 15px;
+}
   
   .image-preview {
     margin-top: 10px;

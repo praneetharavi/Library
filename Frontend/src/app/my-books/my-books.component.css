@@ -1,17 +1,51 @@
 .borrowings-container {
     padding: 20px;
-    background-color: #f9f9f9;
+    padding-left: 50px;
   }
   
   .borrowing-item {
     border: 1px solid #ddd;
     padding: 15px;
     margin-bottom: 10px;
-    background-color: #fff;
     border-radius: 4px;
+  }
+
+  img{
+    width: 30px;
+    height: 30px;
   }
   
   .borrowing-details p {
     margin: 5px 0;
   }
-  
+  h2{
+    font-family: 'Poppins';
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #004236;
+  }
+  .button-class{
+    font-weight: bold;
+    font-family: poppins;
+    padding: 10px 15px;
+    border: 2px solid #FFC0B8; 
+    color: #004236;
+}
+.button-class:hover {
+    background-color: #FFC0B8;
+    border: 2px solid #FFC0B8; 
+    color: #004236;
+    font-weight: bold;
+    font-family: poppins;
+    padding: 10px 15px;
+}
+
+.borrowings-container .table tr:nth-child(even) {
+  color: #004236;
+  background-color: #F4E9DF;
+}
+
+.borrowings-container .table tr:nth-child(odd) {
+  color: #004236;
+  background-color: #FFC0B8;
+}

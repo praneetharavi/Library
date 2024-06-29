@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,8 +13,10 @@ import { Router } from '@angular/router';
   styleUrl: './wishlist.component.css'
 })
 export class WishlistComponent {
+  @ViewChild('wishlistModal') wishlistModal!: ElementRef;
   wishlistBooks: any[] = []; 
   userId : any;
+  selectedBook: any;
 
   constructor(private cartService: CartService, private authService : AuthenticationService,private router :Router) {
     const user = this.authService.getLoggedInUser();
@@ -50,13 +52,29 @@ export class WishlistComponent {
       );
     }
 
-      MoveToCart(bookId : any){
-        this.cartService.moveToCart(this.userId, bookId).subscribe((response)=>{
+      MoveToCart(book : any){
+        this.cartService.moveToCart(this.userId, book.id).subscribe((response)=>{
           this.loadWishlist();
+          this.selectedBook = book;
+          this.showModal(this.wishlistModal)
         })
       }
       GotoHome(){
         this.router.navigate(['/customerdashboard'])
+      }
+      GoToCart(){
+        this.router.navigate(['/cart'])
+      }
+      private showModal(modalElement: ElementRef): void {
+        modalElement.nativeElement.classList.add('show');
+        modalElement.nativeElement.style.display = 'block';
+        document.body.classList.add('modal-open');
+      }
+    
+      closeModal(): void {
+        this.wishlistModal.nativeElement.classList.remove('show');
+        this.wishlistModal.nativeElement.style.display = 'none';
+        document.body.classList.remove('modal-open');
       }
   }
 

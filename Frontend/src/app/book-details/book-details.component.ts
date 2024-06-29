@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AverageRatingComponent } from '../average-rating/average-rating.component';
 import { AuthenticationService } from '../services/authentication.service';
 import { CartService } from '../services/cart.service';
+import { ReviewService } from '../services/review.service';
 
 @Component({
   selector: 'app-book-details',
@@ -23,29 +24,43 @@ export class BookDetailsComponent {
   userId: any;
   isInWishlist: boolean = false;
   isInCart: boolean = false;
+  newReviewText: string = '';
+  newRating: number = 0; 
+  bookId : any;
 
   constructor(
     private route: ActivatedRoute,
     private bookService: BookService,
     private authService: AuthenticationService,
     private cartService: CartService,
-    private router : Router
+    private router : Router,
+    private reviewService : ReviewService
   ) {
     const user = this.authService.getLoggedInUser();
     this.userId = user.userId;
+  
   }
 
-  ngOnInit(): void {
-    const bookId = this.route.snapshot.paramMap.get('id');
-    if (bookId) {
-      this.bookService.getBookById(+bookId).subscribe((book) => {
-        this.book = book;
-        this.rating = this.book.averageRating.toFixed(1);
+
+ ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      const bookId = +params['id'];
+      if (bookId) {
+        this.bookId = bookId;
+        this.bookService.getBookById(+bookId).subscribe((book) => {
+          this.book = book;
+        }
+        );
+        this.book.averageRating = this.book.averageRating.toFixed(1);
         this.checkBookStatus();
-      });
-    }
+      }
+    });
   }
 
+
+  GotoHome(){
+    this.router.navigate(['/customerdashboard'])
+  }
   isCustomer(): boolean {
     return this.authService.getUserRole()?.toLowerCase() === 'customer';
   }
@@ -81,9 +96,14 @@ export class BookDetailsComponent {
     });
   }
 
-  closeModal(): void {
+  closeModalWishlist(): void {
     this.wishlistModal.nativeElement.classList.remove('show');
     this.wishlistModal.nativeElement.style.display = 'none';
+    document.body.classList.remove('modal-open');
+  }
+  closeModalCart(): void {
+    this.cartModal.nativeElement.classList.remove('show');
+    this.cartModal.nativeElement.style.display = 'none';
     document.body.classList.remove('modal-open');
   }
 
@@ -101,4 +121,42 @@ export class BookDetailsComponent {
   goToCart(): void {
     this.router.navigate(['/cart']);
   }
+
+  submitReview() {
+    const newReview = {
+      userId: this.userId,
+      bookId: this.bookId,
+      rating: this.newRating,
+      reviewText: this.newReviewText
+    };
+
+    this.reviewService.addReview(newReview).subscribe(
+      (response) => {
+        console.log('Review added successfully:', response);
+       
+        this.fetchBookDetails();
+        this.newReviewText = '';
+        this.newRating = 0;
+      },
+      (error) => {
+        console.error('Error adding review:', error);
+      }
+    );
+  }
+
+  fetchBookDetails() {
+    this.reviewService.getReviewsByBookId(this.bookId).subscribe(
+      (data) => {
+        this.book = data;
+      },
+      (error) => {
+        console.error('Error fetching book details:', error);
+      }
+    );
+  }
+  setRating(rating: number) {
+    this.newRating = rating;
+  }
+
 }
+

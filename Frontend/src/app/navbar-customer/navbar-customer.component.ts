@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { BookService } from '../services/book.service';
 import { AuthenticationService } from '../services/authentication.service';
 
@@ -52,24 +52,30 @@ getAllBooks() {
     }
   }
 
-  onSearchInput() {
-    if (this.searchTerm.trim() === '') {
+  navigateToBookDetails(book: any) {
+    const navigationExtras: NavigationExtras = {
+      skipLocationChange: false, // Ensure this is set to false to trigger a reload
+      replaceUrl: true // Replace current URL in history with new one
+    };
+
+    this.router.navigate(['/book', book.id], navigationExtras)
+    .then(() => {
       this.showDropdown = false;
+      this.searchTerm = '';
       this.searchResults = [];
-    }
+    });
   }
 
-  navigateToBookDetails(book: any) {
-    this.router.navigate(['/book', book.id]); // Assuming each book has an 'id'
-    this.showDropdown = false;
-    this.searchTerm = '';
-    this.searchResults = [];
+  submitSearch(event: Event) {
+    event.preventDefault(); // Prevent the default form submission
+    this.onSearch();
   }
 
   onSearch() {
     this.showDropdown = false;
     this.router.navigate(['/search-results'], { queryParams: { query: this.searchTerm } });
   }
+
 
   goToWishlist(): void {
     this.router.navigate(['/wishlist']);
@@ -85,10 +91,6 @@ getAllBooks() {
 
   toggleDropdown(){
     this.isDropdownOpen = !this.isDropdownOpen;
-  }
-
-  goToProfile() {
-    this.router.navigate(['/profile']);
   }
 
   goToPastCheckouts() {

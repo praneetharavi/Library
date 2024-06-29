@@ -2,10 +2,10 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#"> <img src="librarylogo.png" alt="Library Logo"></a>
 
-    <form class="form-inline mx-auto" (submit)="searchBooks()">
+    <form class="form-inline mx-auto" (submit)="submitSearch($event)">
         <div class="input-group">
           <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search by title, author" aria-label="Search"
-            [(ngModel)]="searchTerm" name="searchTerm" (ngModelChange)="onSearchInput();searchBooks();" >
+            [(ngModel)]="searchTerm" name="searchTerm" (ngModelChange)="searchBooks();" >
     
           <div class="input-group-append">
             <button class="btn btn-search" type="submit" (click)="onSearch()">
@@ -17,13 +17,13 @@
           <div *ngIf="showDropdown" class="dropdown-menu show">
             <ul class="dropdown-list">
               <li *ngFor="let book of searchResults" class="search-dropdown-item" (click)="navigateToBookDetails(book)">
-                {{ book.title }} by {{ book.author }}
+                <strong>{{ book.title }}</strong> by {{ book.author }}
               </li>
             </ul>
           </div>
         </div>
       </form>
-      
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -31,14 +31,13 @@
 
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        Welcome, {{ user.userName }}
         <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
                        (click)="toggleDropdown()"> <i class="fa-regular fa-user"   [style.color]="isDropdownOpen ? '#004236' : 'black'"></i>
                     </a>
                     <div *ngIf="isDropdownOpen" class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item">Profile</a>
+                      
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="#" (click)="logout()">Logout</a>
                     </div>

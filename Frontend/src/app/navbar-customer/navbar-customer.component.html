@@ -2,13 +2,13 @@
   <a class="navbar-brand" href="#">
     <img src="librarylogo.png" alt="Library Logo">
   </a>
-  <form class="form-inline mx-auto" (submit)="searchBooks()">
+  <form class="form-inline mx-auto"  (submit)="submitSearch($event)">
     <div class="input-group">
       <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search by title, author" aria-label="Search"
-        [(ngModel)]="searchTerm" name="searchTerm" (ngModelChange)="onSearchInput();searchBooks();" >
+        [(ngModel)]="searchTerm" name="searchTerm" (ngModelChange)="searchBooks();" >
 
       <div class="input-group-append">
-        <button class="btn btn-search" type="submit" (click)="onSearch()">
+        <button class="btn btn-search" type="submit">
           <i class="fas fa-search"></i>
         </button>
       </div>
@@ -17,7 +17,7 @@
       <div *ngIf="showDropdown" class="dropdown-menu show">
         <ul class="dropdown-list">
           <li *ngFor="let book of searchResults" class="search-dropdown-item" (click)="navigateToBookDetails(book)">
-            {{ book.title }} by {{ book.author }}
+            <strong>{{ book.title }}</strong> by {{ book.author }}
           </li>
         </ul>
       </div>
@@ -36,7 +36,6 @@
            (click)="toggleDropdown()"><i class="fas fa-user" [style.color]="'#004236'"></i>
         </a> 
         <div *ngIf="isDropdownOpen" class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" (click)="goToProfile()">Profile</a>
           <a class="dropdown-item" (click)="goToPastCheckouts()">My CheckOuts</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#" (click)="logout()">Logout</a>

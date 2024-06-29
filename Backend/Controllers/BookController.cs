@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Backend.Controllers
 {
+    [Authorize(Policy = "LoggedInPolicy")]
     [Route("api/book")]
     [ApiController]
     [EnableCors("AllowAngularApp")]
@@ -47,7 +48,7 @@ namespace Backend.Controllers
                 .ToList();
         }
 
-        [HttpGet("/search")]
+        [HttpGet("search")]
         public IActionResult SearchBooks(string query)
         {
             var results = _dbContext.Books
@@ -55,7 +56,6 @@ namespace Backend.Controllers
                 .ToList();
             return Ok(results);
         }
-
 
 
         [HttpPost]
@@ -71,8 +71,16 @@ namespace Backend.Controllers
             _dbContext.Books.Add(book);
             _dbContext.SaveChanges();
 
-            return CreatedAtAction(nameof(GetById), new { id = book.Id }, book);
+            var response = new BookResponse
+            {
+                Id = book.Id,
+                Title = book.Title
+            };
+
+            return CreatedAtAction(nameof(GetById), new { id = book.Id }, response);
         }
+
+
 
         [HttpPut("{id}")]
         [Authorize(Roles = Roles.Librarian)]
@@ -86,7 +94,14 @@ namespace Backend.Controllers
 
             existingBook.Title = book.Title;
             existingBook.Author = book.Author;
-            // Update other properties as needed
+            existingBook.ISBN = book.ISBN;
+            existingBook.Category = book.Category;
+            existingBook.AverageRating = book.AverageRating;
+            existingBook.CoverImage = book.CoverImage;
+            existingBook.Description = book.Description;
+            existingBook.PublicationDate = book.PublicationDate;
+            existingBook.Publisher = book.Publisher;
+            existingBook.PageCount = book.PageCount;
 
             _dbContext.SaveChanges();
 
@@ -109,18 +124,12 @@ namespace Backend.Controllers
 
             return NoContent();
         }
-
-        [HttpPut("/return")]
+        [HttpPut("return/{borrowingId}")]
         [Authorize(Roles = Roles.Librarian)]
-        public IActionResult MarkAsReturned([FromBody] Borrowing borrowing)
+        public IActionResult MarkAsReturned(int borrowingId)
         {
-            if (borrowing == null)
-            {
-                return BadRequest("Borrowing object is null");
-            }
-
             var borrowingRecord = _dbContext.Borrowings
-                                            .FirstOrDefault(b => b.BookId == borrowing.BookId && b.UserId == borrowing.UserId && b.ReturnedDate == null);
+                                            .FirstOrDefault(b => b.Id == borrowingId && b.ReturnedDate == null);
 
             if (borrowingRecord == null)
             {
@@ -129,10 +138,10 @@ namespace Backend.Controllers
 
             borrowingRecord.ReturnedDate = DateTime.UtcNow;
 
-            var book = _dbContext.Books.Find(borrowing.BookId);
+            var book = _dbContext.Books.Find(borrowingRecord.BookId);
             if (book != null)
             {
-                book.CopiesAvailable = 1;
+                book.CopiesAvailable++; // Assuming CopiesAvailable is an integer count
             }
 
             try
@@ -141,14 +150,13 @@ namespace Backend.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                return Conflict();
+                return Conflict("Concurrency error occurred while updating borrowing record");
             }
 
             return Ok();
         }
 
 
-      
     }
 }
 

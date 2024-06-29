@@ -1,5 +1,5 @@
 <div class="borrowings-container">
-  <a (click)="GotoHome()" class="btn btn-primary mb-3">
+  <a (click)="GotoHome()" class="btn button-class mb-3">
     <i class="fas fa-home"></i> Home
   </a>
   <h2>All Borrowings</h2>
@@ -20,17 +20,17 @@
     <tbody>
       <tr *ngFor="let borrowing of borrowings">
         <td>
-          <img [src]="borrowing.coverImageUrl" alt="{{ borrowing.bookName }}" class="cover-image">
+          <img [src]="borrowing.coverImage" alt="{{ borrowing.bookName }}" class="cover-image">
         </td>
         <td>{{ borrowing.bookName }}</td>
         <td>{{ borrowing.author }}</td>
         <td>{{ borrowing.borrowDate | date }}</td>
         <td>{{ borrowing.returnDate | date }}</td>
         <td>
-          <span *ngIf="borrowing.returnedDate; else notReturned">Returned</span>
+
+          <span *ngIf="borrowing.returnedDate != null; else notReturned">Returned</span>
           <ng-template #notReturned>
-            <span *ngIf="today > borrowing.returnDate">Overdue</span>
-            <span *ngIf="today <= borrowing.returnDate">Due Soon</span>
+            <span>Not Returned</span>
           </ng-template>
         </td>
       </tr>

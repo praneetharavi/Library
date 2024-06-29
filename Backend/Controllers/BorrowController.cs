@@ -9,6 +9,7 @@ using System.Security.Claims;
 namespace Backend.Controllers
 {
 
+    [Authorize(Policy = "LoggedInPolicy")]
     [Route("api/Borrow")]
     [ApiController]
     [EnableCors("AllowAngularApp")]
@@ -232,7 +233,9 @@ namespace Backend.Controllers
                     Author = b.Book.Author,
                     BorrowDate = b.BorrowDate,
                     ReturnDate = b.ReturnDate,
-                    CoverImage = b.Book.CoverImage
+                    CoverImage = b.Book.CoverImage,
+                    ReturnedDate = b.ReturnedDate,
+                    BorrowingId = b.Id
                 })
                 .ToList();
 
@@ -259,7 +262,10 @@ namespace Backend.Controllers
                     BookName = b.Book.Title,
                     Author = b.Book.Author,
                     BorrowDate = b.BorrowDate,
-                    CoverImage = b.Book.CoverImage
+                    ReturnDate= b.ReturnDate,
+                    CoverImage = b.Book.CoverImage,
+                    ReturnedDate = b.ReturnedDate,
+                    BorrowingId = b.Id
                 })
                 .ToList();
 
