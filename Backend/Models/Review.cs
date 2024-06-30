@@ -9,7 +9,7 @@ namespace Backend.Models
         public int Id { get; set; }
 
         [Required]
-        public String UserId { get; set; }
+        public string UserId { get; set; }
 
         [Required]
         public int BookId { get; set; }
@@ -24,6 +24,6 @@ namespace Backend.Models
 
         [ForeignKey("BookId")]
         public Book Book { get; set; }
-    }
 
+    }
 }

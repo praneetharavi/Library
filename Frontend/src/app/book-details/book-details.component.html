@@ -33,6 +33,45 @@
       </div>
     </div>
   </div>
+
+  <div *ngIf="isCustomer()">
+    <button class="btn button-class" (click)="addToWishlist(book?.id)">
+      {{ isBookInWishlist() ? 'Already in Wishlist' : 'Add to Wishlist' }}
+    </button>
+    <button class="btn button-class1 mr-2" (click)="addToCart(book?.id)">
+      {{ isBookInCart() ? 'Already in Cart' : 'Add to Cart' }}
+    </button>
+  </div>
+
+  <!-- Reviews Section -->
+  <div class="reviews-section mt-4">
+    <h3>Reviews</h3>
+    <div *ngFor="let review of reviews" class="review">
+      <p style="padding-bottom: 0;margin-bottom: 0 !important;"><i class="fas fa-user" [style.color]="'#004236'"></i><strong style="padding-left: 5px;">{{ review.username }}</strong></p>
+      <app-average-rating [averageRating]="review.rating"></app-average-rating>
+      <p>{{ review.reviewText }}</p>
+    </div>
+    <div *ngIf="isCustomer()" class="add-review mt-4">
+      <h4>Add Your Review</h4>
+      <form (ngSubmit)="submitReview()">
+        <div class="form-group">
+          <label for="rating">Rating</label>
+          <div class="star-rating">
+            <span class="star" (click)="setRating(1)" [ngClass]="{'filled': newReview.rating >= 1}">&#9733;</span>
+            <span class="star" (click)="setRating(2)" [ngClass]="{'filled': newReview.rating >= 2}">&#9733;</span>
+            <span class="star" (click)="setRating(3)" [ngClass]="{'filled': newReview.rating >= 3}">&#9733;</span>
+            <span class="star" (click)="setRating(4)" [ngClass]="{'filled': newReview.rating >= 4}">&#9733;</span>
+            <span class="star" (click)="setRating(5)" [ngClass]="{'filled': newReview.rating >= 5}">&#9733;</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="reviewText">Review</label>
+          <textarea id="reviewText" [(ngModel)]="newReview.reviewText" name="reviewText" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn button-class" style="margin-top:15px;">Submit Review</button>
+      </form>
+    </div>
+  </div>
 </div>
 
 

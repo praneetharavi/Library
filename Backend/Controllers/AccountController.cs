@@ -195,8 +195,6 @@ namespace Backend.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception for debugging purposes
-                // Replace with appropriate logging mechanism based on your application's logging strategy
                 Console.WriteLine($"Error in GetCustomers: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }

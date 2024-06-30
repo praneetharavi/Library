@@ -15,7 +15,7 @@ namespace Backend.Controllers
     [ApiController]
     public class ReviewController : ControllerBase
     {
-        private readonly ApplicationDBContext _context; 
+        private readonly ApplicationDBContext _context;
 
         public ReviewController(ApplicationDBContext context)
         {
@@ -37,29 +37,41 @@ namespace Backend.Controllers
             }
 
             var book = _context.Books
-                                .Include(b => b.Reviews) 
                                 .FirstOrDefault(b => b.Id == reviewDto.BookId);
             if (book == null)
             {
-                return BadRequest("Book not found"); 
+                return BadRequest("Book not found");
             }
+
             var review = new Review
             {
                 UserId = reviewDto.UserId,
-                User = user, 
+                User = user,
                 BookId = reviewDto.BookId,
-                Book = book, 
+                Book = book,
                 Rating = reviewDto.Rating,
                 ReviewText = reviewDto.ReviewText
             };
 
             _context.Reviews.Add(review);
 
-            book.AverageRating = (book.Reviews.Sum(r => r.Rating) + review.Rating) / (book.Reviews.Count + 1);
-
             try
             {
                 _context.SaveChanges();
+                var reviewsForBook = _context.Reviews.Where(r => r.BookId == reviewDto.BookId).ToList();
+                if (reviewsForBook.Any())
+                {
+
+                    book.AverageRating = reviewsForBook.Average(r => r.Rating);
+                    _context.Books.Update(book);
+                    _context.SaveChanges();
+                }
+                else
+                {
+                    book.AverageRating = reviewDto.Rating;
+                    _context.Books.Update(book);
+                    _context.SaveChanges();
+                }
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -74,10 +86,20 @@ namespace Backend.Controllers
         public IActionResult GetReviewsByBookId(int bookId)
         {
             var reviews = _context.Reviews
-                                 .Where(r => r.BookId == bookId)
-                                 .ToList();
+                                  .Where(r => r.BookId == bookId)
+                                  .Select(r => new GetReviewDto
+                                  {
+                                      Id = r.Id,
+                                      UserId = r.UserId,
+                                      Username = r.User.UserName, // Assuming UserName is the field for username
+                                      BookId = r.BookId,
+                                      Rating = r.Rating,
+                                      ReviewText = r.ReviewText
+                                  })
+                                  .ToList();
 
             return Ok(reviews);
         }
+
     }
 }

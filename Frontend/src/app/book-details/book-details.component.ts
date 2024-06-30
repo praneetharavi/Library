@@ -20,13 +20,13 @@ export class BookDetailsComponent {
   @ViewChild('cartModal') cartModal!: ElementRef;
 
   book: any;
-  rating: any;
+  rating : any;
   userId: any;
   isInWishlist: boolean = false;
   isInCart: boolean = false;
-  newReviewText: string = '';
-  newRating: number = 0; 
   bookId : any;
+  reviews: any[] = [];
+  newReview: any = { rating: 0, reviewText: '' };
 
   constructor(
     private route: ActivatedRoute,
@@ -49,17 +49,40 @@ export class BookDetailsComponent {
         this.bookId = bookId;
         this.bookService.getBookById(+bookId).subscribe((book) => {
           this.book = book;
+          this.book.averageRating = this.book.averageRating.toFixed(1);
+          this.checkBookStatus();
+          this.getReviews(bookId);
         }
         );
-        this.book.averageRating = this.book.averageRating.toFixed(1);
-        this.checkBookStatus();
       }
     });
   }
 
+  getReviews(bookId: any): void {
+    this.reviewService.getReviewsByBookId(bookId).subscribe(reviews => {
+      this.reviews = reviews;
+    });
+  }
 
+  submitReview(): void {
+    const review = {
+      userId: this.userId,
+      bookId: this.book.id,
+      rating: this.newReview.rating,
+      reviewText: this.newReview.reviewText
+    };
+
+    this.reviewService.addReview(review).subscribe(newReview => {
+      this.reviews.unshift(newReview);
+      this.newReview = { rating: 0, reviewText: '' };
+    });
+  }
   GotoHome(){
     this.router.navigate(['/customerdashboard'])
+  }
+
+  setRating(rating: number): void {
+    this.newReview.rating = rating;
   }
   isCustomer(): boolean {
     return this.authService.getUserRole()?.toLowerCase() === 'customer';
@@ -122,41 +145,6 @@ export class BookDetailsComponent {
     this.router.navigate(['/cart']);
   }
 
-  submitReview() {
-    const newReview = {
-      userId: this.userId,
-      bookId: this.bookId,
-      rating: this.newRating,
-      reviewText: this.newReviewText
-    };
-
-    this.reviewService.addReview(newReview).subscribe(
-      (response) => {
-        console.log('Review added successfully:', response);
-       
-        this.fetchBookDetails();
-        this.newReviewText = '';
-        this.newRating = 0;
-      },
-      (error) => {
-        console.error('Error adding review:', error);
-      }
-    );
-  }
-
-  fetchBookDetails() {
-    this.reviewService.getReviewsByBookId(this.bookId).subscribe(
-      (data) => {
-        this.book = data;
-      },
-      (error) => {
-        console.error('Error fetching book details:', error);
-      }
-    );
-  }
-  setRating(rating: number) {
-    this.newRating = rating;
-  }
 
 }
 

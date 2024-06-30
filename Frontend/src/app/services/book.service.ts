@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { environment } from '../../environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,8 @@ export class BookService {
   private refreshBooksSource = new BehaviorSubject<boolean>(true);
   refreshBooks$ = this.refreshBooksSource.asObservable();
   
-  private apiUrl = 'http://localhost:5120/api/book';
+
+private apiUrl = `${environment.apiUrl}/book`;
 
   constructor(private http : HttpClient) { }
 

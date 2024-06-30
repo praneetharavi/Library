@@ -3,76 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\controllers\\borrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:controllers\\borrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\book\\multiplecheckoutrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\book\\multiplecheckoutrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\migrations\\20240630221842_createreviewstablewithschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:migrations\\20240630221842_createreviewstablewithschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\book\\addtocartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\book\\addtocartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\migrations\\20240623021103_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:migrations\\20240623021103_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\book\\checkoutrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\book\\checkoutrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\account\\newuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\account\\newuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\models\\userbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:models\\userbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\migrations\\20240623021103_init.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:migrations\\20240623021103_init.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\models\\borrowing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:models\\borrowing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\services\\bookdataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:services\\bookdataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\models\\borrowing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:models\\borrowing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\backend.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:backend.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\book\\checkoutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\book\\checkoutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,6 +53,70 @@
     {
       "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\models\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:models\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\book\\multiplecheckoutrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\book\\multiplecheckoutrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\book\\checkoutrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\book\\checkoutrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\book\\checkoutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\book\\checkoutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\book\\addtocartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\book\\addtocartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\account\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\account\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\account\\newuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\account\\newuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\account\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\account\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\account\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\account\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\controllers\\borrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:controllers\\borrowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\review\\postreviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\review\\postreviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\models\\userbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:models\\userbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\services\\bookdataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:services\\bookdataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -96,26 +132,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\account\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\account\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\account\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\account\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\migrations\\20240623021103_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:migrations\\20240623021103_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|c:\\users\\vamsi\\desktop\\troywebconsulting\\library\\backend\\dtos\\account\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE92F43A-EB61-4846-BB70-359DA965EED7}|Backend.csproj|solutionrelative:dtos\\account\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -125,24 +141,180 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BorrowController.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\BorrowController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BorrowController.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\BorrowController.cs",
-              "RelativeToolTip": "Controllers\\BorrowController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACIAAAAJAAAA",
+              "DocumentIndex": 3,
+              "Title": "20240623021103_init.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Migrations\\20240623021103_init.Designer.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240623021103_init.Designer.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Migrations\\20240623021103_init.Designer.cs",
+              "RelativeToolTip": "Migrations\\20240623021103_init.Designer.cs",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAQwA4AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T17:34:24.253Z",
+              "WhenOpened": "2024-06-30T22:21:24.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "20240630221842_CreateReviewsTableWithSchema.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Migrations\\20240630221842_CreateReviewsTableWithSchema.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240630221842_CreateReviewsTableWithSchema.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Migrations\\20240630221842_CreateReviewsTableWithSchema.cs",
+              "RelativeToolTip": "Migrations\\20240630221842_CreateReviewsTableWithSchema.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAADwvwoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T22:18:44.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20240623021103_init.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Migrations\\20240623021103_init.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240623021103_init.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Migrations\\20240623021103_init.cs",
+              "RelativeToolTip": "Migrations\\20240623021103_init.cs",
+              "ViewState": "AQIAANAAAAAAAAAAAAAQwNQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T20:23:50.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReviewController.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\ReviewController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReviewController.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\ReviewController.cs",
+              "RelativeToolTip": "Controllers\\ReviewController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAmwE4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T22:07:50.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "Models\\Review.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Review.cs",
+              "RelativeToolTip": "Models\\Review.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T02:55:47.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "Models\\Book.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Book.cs",
+              "RelativeToolTip": "Models\\Book.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwCAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T01:50:38.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Backend.http",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Backend.http",
+              "RelativeDocumentMoniker": "Backend.http",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Backend.http",
+              "RelativeToolTip": "Backend.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-06-30T02:32:05.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T20:49:17.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Data\\ApplicationDBContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDBContext.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Data\\ApplicationDBContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDBContext.cs",
+              "ViewState": "AQIAABIAAACAZJOHJrMpwBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T01:27:38.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Borrowing.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Borrowing.cs",
+              "RelativeDocumentMoniker": "Models\\Borrowing.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Borrowing.cs",
+              "RelativeToolTip": "Models\\Borrowing.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T01:47:42.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAG0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T01:28:14.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T01:27:22.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Roles.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Roles.cs",
+              "RelativeDocumentMoniker": "Models\\Roles.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Roles.cs",
+              "RelativeToolTip": "Models\\Roles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T20:57:23.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "MultipleCheckoutRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Book\\MultipleCheckoutRequestDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Book\\MultipleCheckoutRequestDto.cs",
@@ -155,20 +327,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\CartController.cs",
-              "RelativeToolTip": "Controllers\\CartController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAwEkAAAAwAAAA",
+              "DocumentIndex": 14,
+              "Title": "CheckoutRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Book\\CheckoutRequestDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Book\\CheckoutRequestDto.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Book\\CheckoutRequestDto.cs",
+              "RelativeToolTip": "Dtos\\Book\\CheckoutRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T17:46:54.88Z",
+              "WhenOpened": "2024-06-26T17:37:08.72Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
+              "Title": "CheckoutDto.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Book\\CheckoutDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Book\\CheckoutDto.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Book\\CheckoutDto.cs",
+              "RelativeToolTip": "Dtos\\Book\\CheckoutDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T17:28:00.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "AddToCartRequest.cs",
               "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Book\\AddToCartRequest.cs",
               "RelativeDocumentMoniker": "Dtos\\Book\\AddToCartRequest.cs",
@@ -181,59 +366,137 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CheckoutRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Book\\CheckoutRequestDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Book\\CheckoutRequestDto.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Book\\CheckoutRequestDto.cs",
-              "RelativeToolTip": "Dtos\\Book\\CheckoutRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "DocumentIndex": 17,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Account\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\RegisterDto.cs",
+              "RelativeToolTip": "Dtos\\Account\\RegisterDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T17:37:08.72Z",
+              "WhenOpened": "2024-06-23T04:30:07.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AQIAALYAAAAAAAAAAAAYwHkAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T04:25:49.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 18,
               "Title": "NewUserDto.cs",
               "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\NewUserDto.cs",
               "RelativeDocumentMoniker": "Dtos\\Account\\NewUserDto.cs",
               "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\NewUserDto.cs",
               "RelativeToolTip": "Dtos\\Account\\NewUserDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T18:39:00.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 19,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\LoginDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Account\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\LoginDto.cs",
+              "RelativeToolTip": "Dtos\\Account\\LoginDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T18:39:06.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CustomerDto.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\CustomerDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Account\\CustomerDto.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\CustomerDto.cs",
+              "RelativeToolTip": "Dtos\\Account\\CustomerDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T20:20:33.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T20:40:13.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwCkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T17:46:54.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BorrowController.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\BorrowController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BorrowController.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\BorrowController.cs",
+              "RelativeToolTip": "Controllers\\BorrowController.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAowJEAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T17:34:24.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "BookController.cs",
               "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\BookController.cs",
               "RelativeDocumentMoniker": "Controllers\\BookController.cs",
               "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\BookController.cs",
               "RelativeToolTip": "Controllers\\BookController.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAwwDQAAAAkAAAA",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAwwHMAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-12T18:30:40.838Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 25,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAmwMQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T04:25:49.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PostReviewDto.cs",
+              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Review\\PostReviewDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\Review\\PostReviewDto.cs",
+              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Review\\PostReviewDto.cs",
+              "RelativeToolTip": "Dtos\\Review\\PostReviewDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T01:55:44.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "UserBooks.cs",
               "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\UserBooks.cs",
               "RelativeDocumentMoniker": "Models\\UserBooks.cs",
@@ -241,87 +504,11 @@
               "RelativeToolTip": "Models\\UserBooks.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T17:22:45.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T17:22:45.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ApplicationDBContext.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Data\\ApplicationDBContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDBContext.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Data\\ApplicationDBContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDBContext.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAmwCMAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T01:27:38.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Book.cs",
-              "RelativeDocumentMoniker": "Models\\Book.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Book.cs",
-              "RelativeToolTip": "Models\\Book.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAA9wBUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T01:50:38.496Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAG0AAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T01:28:14.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Review.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Review.cs",
-              "RelativeDocumentMoniker": "Models\\Review.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Review.cs",
-              "RelativeToolTip": "Models\\Review.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwAsAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T01:50:43.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Borrowing.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Borrowing.cs",
-              "RelativeDocumentMoniker": "Models\\Borrowing.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Borrowing.cs",
-              "RelativeToolTip": "Models\\Borrowing.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAiwCEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T01:47:42.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\WeatherForecast.cs",
-              "RelativeToolTip": "WeatherForecast.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T20:49:17.289Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 28,
               "Title": "BookDataSeeder.cs",
               "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Services\\BookDataSeeder.cs",
               "RelativeDocumentMoniker": "Services\\BookDataSeeder.cs",
@@ -329,59 +516,12 @@
               "RelativeToolTip": "Services\\BookDataSeeder.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAAA8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T20:50:14.156Z"
+              "WhenOpened": "2024-06-26T20:50:14.156Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T20:40:13.741Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CheckoutDto.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Book\\CheckoutDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Book\\CheckoutDto.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Book\\CheckoutDto.cs",
-              "RelativeToolTip": "Dtos\\Book\\CheckoutDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T17:28:00.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Roles.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Roles.cs",
-              "RelativeDocumentMoniker": "Models\\Roles.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\Roles.cs",
-              "RelativeToolTip": "Models\\Roles.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T20:57:23.104Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T01:27:22.207Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 29,
               "Title": "TokenService.cs",
               "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "Services\\TokenService.cs",
@@ -393,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 30,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -401,11 +541,12 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-23T01:36:12.076Z"
+              "WhenOpened": "2024-06-23T01:36:12.076Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 31,
               "Title": "ITokenService.cs",
               "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Interfaces\\ITokenService.cs",
               "RelativeDocumentMoniker": "Interfaces\\ITokenService.cs",
@@ -417,43 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "20240623021103_init.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Migrations\\20240623021103_init.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240623021103_init.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Migrations\\20240623021103_init.cs",
-              "RelativeToolTip": "Migrations\\20240623021103_init.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T20:23:50.488Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\LoginDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Account\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\LoginDto.cs",
-              "RelativeToolTip": "Dtos\\Account\\LoginDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T18:39:06.511Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "CustomerDto.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\CustomerDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Account\\CustomerDto.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\CustomerDto.cs",
-              "RelativeToolTip": "Dtos\\Account\\CustomerDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T20:20:33.096Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 32,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -462,30 +567,6 @@
               "ViewState": "AQIAAH8UAAAAAAAAAADwv5UUAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2024-06-25T21:38:01.399Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Backend.csproj",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Backend.csproj",
-              "RelativeDocumentMoniker": "Backend.csproj",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Backend.csproj",
-              "RelativeToolTip": "Backend.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-24T20:51:35.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "RegisterDto.cs",
-              "DocumentMoniker": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\RegisterDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\Account\\RegisterDto.cs",
-              "ToolTip": "C:\\Users\\vamsi\\Desktop\\TroyWebConsulting\\Library\\Backend\\Dtos\\Account\\RegisterDto.cs",
-              "RelativeToolTip": "Dtos\\Account\\RegisterDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T04:30:07.489Z"
             }
           ]
         }

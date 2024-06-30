@@ -4,10 +4,6 @@ namespace Backend.Models
 {
     public class Book
     {
-        public Book()
-        {
-            Reviews = new List<Review>();
-        }
 
 
         [Key]
@@ -46,6 +42,5 @@ namespace Backend.Models
 
         public double AverageRating { get; set; }
 
-        public ICollection<Review> Reviews { get; set; }
     }
 }

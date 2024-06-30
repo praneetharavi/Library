@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from '../../environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class UserService {
   private isAuthenticated = false;
   private role: 'librarian' | 'customer' | null = null;
 
-  private apiUrl = 'http://localhost:5120/api/account'; // Update with your actual backend URL
+  private apiUrl = `${environment.apiUrl}/account`;
 
   constructor(private http: HttpClient) {
     const currentUser = this.getCurrentUser();
