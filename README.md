@@ -23,3 +23,7 @@ npm install
 4 All API calls are directed to http://localhost:5120/ for apis
 if APIs are running on different port 
 Change API url in environement.prod.ts file
+
+**# Welcome Page**
+<img width="944" alt="image" src="https://github.com/praneetharavi/Library/assets/111987550/4c26ec80-a74a-4f47-b181-08462807878a">
+
